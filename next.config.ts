@@ -1,39 +1,13 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  experimental: {
-    optimizeCss: true,
-    turbo: {
-      rules: {
-        '*.svg': {
-          loaders: ['@svgr/webpack'],
-          as: '*.js',
-        },
-      },
-    },
-  },
-  
-  images: {
-    formats: ['image/webp', 'image/avif'],
-    minimumCacheTTL: 31536000,
-  },
-  
-  async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: [
-          { key: 'X-Frame-Options', value: 'DENY' },
-          { key: 'X-Content-Type-Options', value: 'nosniff' },
-          { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
-          { key: 'Strict-Transport-Security', value: 'max-age=31536000; includeSubDomains' }
-        ]
-      }
-    ]
-  },
-  
-  compress: true,
-  poweredByHeader: false,
-  output: process.env.NODE_ENV === 'production' ? 'standalone' : undefined
-}
+import type { NextConfig } from "next";
 
-module.exports = nextConfig
+const nextConfig: NextConfig = {
+  // Tell Turbopack the project root (silences the warning)
+  turbopack: { root: "." },
+
+  // Keep any flags you actually use here
+  experimental: {
+    optimizeCss: true
+  }
+};
+
+export default nextConfig;
