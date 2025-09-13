@@ -53,10 +53,16 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
   handler satisfies AppPageConfig<"/">
 }
 
-// Validate ../../src/app/api/integai/route.ts
+// Validate ../../src/app/api/deepseek/route.ts
 {
-  const handler = {} as typeof import("../../src/app/api/integai/route.js")
-  handler satisfies RouteHandlerConfig<"/api/integai">
+  const handler = {} as typeof import("../../src/app/api/deepseek/route.js")
+  handler satisfies RouteHandlerConfig<"/api/deepseek">
+}
+
+// Validate ../../src/app/api/health/route.ts
+{
+  const handler = {} as typeof import("../../src/app/api/health/route.js")
+  handler satisfies RouteHandlerConfig<"/api/health">
 }
 
 

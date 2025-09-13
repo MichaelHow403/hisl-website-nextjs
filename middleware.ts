@@ -15,7 +15,7 @@ export function middleware(req: NextRequest) {
   for (const [k,v] of Object.entries(SECURITY_HEADERS)) res.headers.set(k,v)
 
   if (req.nextUrl.pathname.startsWith('/api/')) {
-    const ip = req.ip ?? req.headers.get('x-forwarded-for') ?? 'anon'
+    const ip = req.headers.get('x-forwarded-for') ?? req.headers.get('x-real-ip') ?? 'anon'
     const now = Date.now()
     const b = BUCKET.get(ip) ?? { n:0, t: now }
     if (now - b.t > LIMIT.windowMs) { b.n = 0; b.t = now }

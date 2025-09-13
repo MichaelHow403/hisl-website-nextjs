@@ -1,5 +1,7 @@
 {
   "/_not-found/page": "/_not-found",
+  "/api/deepseek/route": "/api/deepseek",
+  "/api/health/route": "/api/health",
   "/favicon.ico/route": "/favicon.ico",
   "/page": "/"
 }

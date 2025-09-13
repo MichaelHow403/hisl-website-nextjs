@@ -1,0 +1,39 @@
+{
+  "sorted_middleware": [
+    "/api/health/route"
+  ],
+  "middleware": {},
+  "instrumentation": null,
+  "functions": {
+    "/api/health/route": {
+      "files": [
+        "server/middleware-build-manifest.js",
+        "server/interception-route-rewrite-manifest.js",
+        "server/server-reference-manifest.js",
+        "server/app/api/health/route_client-reference-manifest.js",
+        "server/edge/chunks/9e3a1_hisl-website-nextjs__next-internal_server_app_api_health_route_actions_345c5eb3.js",
+        "server/edge/chunks/e590c_hisl-website-nextjs__next-internal_server_app_api_health_route_actions_5ba806df.js",
+        "server/edge/chunks/[root-of-the-server]__df1f93eb._.js",
+        "server/edge/chunks/001b4_bb4e2127._.js",
+        "server/edge/chunks/turbopack-projects_hisl-website-nextjs_edge-wrapper_b2a0c9ae.js"
+      ],
+      "name": "app/api/health/route",
+      "page": "/api/health/route",
+      "matchers": [
+        {
+          "regexp": "^/api/health(?:/)?$",
+          "originalSource": "/api/health"
+        }
+      ],
+      "wasm": [],
+      "assets": [],
+      "env": {
+        "__NEXT_BUILD_ID": "RZA30CcT97gXsp1ImdtrI",
+        "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "9J30H2SBQvH+09gNrADHSUO088Ipok9OlchD3tthPbs=",
+        "__NEXT_PREVIEW_MODE_ID": "531b2dbc2af00c91c4d62cbaf580e29b",
+        "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "3c682170312cc6389c00546437e7b81ff513da8560aa701f31aa995dbea15cd4",
+        "__NEXT_PREVIEW_MODE_SIGNING_KEY": "70b783c5f7dd0f18bc24e5ce4d59367becbe166663be927f7996ada99167d7fc"
+      }
+    }
+  }
+}

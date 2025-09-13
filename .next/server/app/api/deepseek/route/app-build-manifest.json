@@ -1,0 +1,10 @@
+{
+  "pages": {
+    "/api/deepseek/route": [
+      "static/chunks/48944b584b1a36f4.js",
+      "static/chunks/0348d412c8e43f7d.js",
+      "static/chunks/c7d6b44233b88b4a.js",
+      "static/chunks/turbopack-2ad3958e0bff97f5.js"
+    ]
+  }
+}

@@ -1,7 +1,7 @@
 export const runtime = 'edge'
 import { NextRequest } from 'next/server'
-import type { AIRequest, AIResponse } from '../../../src/lib/types'
-import { evaluatePolicy } from '../../../src/lib/policy'
+import type { AIRequest, AIResponse } from './types'
+import { evaluatePolicy } from './policy'
 
 function okConsent(token: string | undefined){ return !!token && token.length > 0 }
 
