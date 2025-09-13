@@ -1,0 +1,43 @@
+{
+  "sorted_middleware": [
+    "/api/integai/route"
+  ],
+  "middleware": {},
+  "instrumentation": null,
+  "functions": {
+    "/api/integai/route": {
+      "files": [
+        "server/middleware-build-manifest.js",
+        "server/interception-route-rewrite-manifest.js",
+        "server/server-reference-manifest.js",
+        "server/app/api/integai/route_client-reference-manifest.js",
+        "server/edge/chunks/_next-internal_server_app_api_integai_route_actions_94498e85.js",
+        "server/edge/chunks/turbopack-_next-internal_server_app_api_integai_route_actions_6779d997.js",
+        "server/edge/chunks/node_modules_next_dist_esm_49d7de94._.js",
+        "server/edge/chunks/node_modules_next_dist_compiled_7dd8a9da._.js",
+        "server/edge/chunks/node_modules_next_dist_7bea040f._.js",
+        "server/edge/chunks/edge-wrapper_d187b01e.js",
+        "server/edge/chunks/node_modules_@opentelemetry_api_build_esm_5713bd62._.js",
+        "server/edge/chunks/[root-of-the-server]__04aa8b34._.js",
+        "server/edge/chunks/turbopack-edge-wrapper_c1a1da85.js"
+      ],
+      "name": "app/api/integai/route",
+      "page": "/api/integai/route",
+      "matchers": [
+        {
+          "regexp": "^/api/integai(?:/)?$",
+          "originalSource": "/api/integai"
+        }
+      ],
+      "wasm": [],
+      "assets": [],
+      "env": {
+        "__NEXT_BUILD_ID": "development",
+        "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "LxI70C3kcH3lDh41VsUqklObdGkjoAM2/JOr/Gmt/74=",
+        "__NEXT_PREVIEW_MODE_ID": "89b133a563acd92c5e7f632063acab36",
+        "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "f7aaa7b460db9c829a9dec033d5c0e5e5ca816abc13bc0c5cd1858b72bd6f285",
+        "__NEXT_PREVIEW_MODE_SIGNING_KEY": "d55a19d52d1ef2897562fc39eef082fcc813299c025316620d214ecffcbb416e"
+      }
+    }
+  }
+}
