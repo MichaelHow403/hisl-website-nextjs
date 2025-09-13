@@ -7,3 +7,6 @@ posthog.init(process.env.NEXT_PUBLIC_POSTHOG_KEY!, {
   capture_exceptions: true, // This enables capturing exceptions using Error Tracking
   debug: process.env.NODE_ENV === "development",
 });
+
+import * as Sentry from "@sentry/nextjs";
+export const onRouterTransitionStart = Sentry.captureRouterTransitionStart;
