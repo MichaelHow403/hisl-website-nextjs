@@ -4,7 +4,7 @@
     "env": {
       "_sentryRewriteFramesDistDir": ".next",
       "_sentryRewriteFramesAssetPrefixPath": "",
-      "_sentryRelease": "8341daf18e2f90b1e4a4158f34e3f5f37226eb49"
+      "_sentryRelease": "572ac4a0173ad01a64d400dfeafa2e6881a476ab"
     },
     "webpack": null,
     "eslint": {
@@ -326,7 +326,7 @@
               "loader": "/home/michael/projects/hisl-website-nextjs/node_modules/@sentry/nextjs/build/cjs/config/loaders/valueInjectionLoader.js",
               "options": {
                 "values": {
-                  "_sentryRouteManifest": "{\"dynamicRoutes\":[],\"staticRoutes\":[{\"path\":\"/\"}]}",
+                  "_sentryRouteManifest": "{\"dynamicRoutes\":[],\"staticRoutes\":[{\"path\":\"/\"},{\"path\":\"/about\"},{\"path\":\"/consent\"},{\"path\":\"/contact\"},{\"path\":\"/deploy\"},{\"path\":\"/globe\"}]}",
                   "_sentryNextJsVersion": "15.5.0"
                 }
               }

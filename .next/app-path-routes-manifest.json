@@ -1,7 +1,12 @@
 {
   "/_not-found/page": "/_not-found",
+  "/about/page": "/about",
   "/api/deepseek/route": "/api/deepseek",
   "/api/health/route": "/api/health",
+  "/consent/page": "/consent",
+  "/contact/page": "/contact",
+  "/deploy/page": "/deploy",
   "/favicon.ico/route": "/favicon.ico",
+  "/globe/page": "/globe",
   "/page": "/"
 }
