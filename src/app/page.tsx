@@ -27,7 +27,7 @@ export default function Home() {
       } else {
         setResponse("Error: " + data.error);
       }
-    } catch (error) {
+    } catch (_error) {
       setResponse("An unexpected error occurred.");
     } finally {
       setLoading(false);
