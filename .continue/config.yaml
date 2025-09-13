@@ -1,0 +1,27 @@
+name: HISL Local Agent
+version: 1.0.0
+schema: v1
+models:
+  - name: Qwen Local
+    provider: ollama
+    model: qwen2.5-coder:7b
+    apiBase: http://localhost:11434
+
+context:
+  - provider: code
+  - provider: docs
+  - provider: diff
+  - provider: terminal
+  - provider: problems
+  - provider: folder
+  - provider: codebase
+
+tools:
+  - name: folder
+    provider: folder
+  - name: code
+    provider: code
+  - name: terminal
+    provider: terminal
+  - name: diff
+    provider: diff
