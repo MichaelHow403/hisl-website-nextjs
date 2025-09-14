@@ -58,6 +58,13 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-black text-amber-50 font-sans relative overflow-hidden">
+      {/* Skip Navigation for Screen Readers */}
+      <a 
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-amber-600 text-black px-4 py-2 rounded-md z-50 focus:z-50"
+      >
+        Skip to main content
+      </a>
       {/* Cosmic Starfield Background */}
       <div className="fixed inset-0 opacity-30 pointer-events-none">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-950 via-slate-900 to-black"></div>
@@ -92,17 +99,17 @@ export default function Home() {
                 <p className="text-xs text-amber-300/70 font-medium tracking-wide">INDUSTRIAL INTELLIGENCE</p>
               </div>
             </div>
-            <nav className="hidden md:flex space-x-8">
-              <span className="text-amber-400 hover:text-amber-300 font-semibold transition-colors cursor-pointer">
+            <nav className="hidden md:flex space-x-8" aria-label="Main navigation">
+              <span className="text-amber-400 hover:text-amber-300 font-semibold transition-colors cursor-pointer" role="button" tabIndex={0} aria-label="Current page: Globe view">
                 GLOBE
               </span>
-              <Link href="/projects" className="text-slate-300 hover:text-amber-300 font-medium transition-colors">
+              <Link href="/projects" className="text-slate-300 hover:text-amber-300 font-medium transition-colors" aria-label="Navigate to Projects page">
                 PROJECTS
               </Link>
-              <Link href="/knowledge" className="text-slate-300 hover:text-amber-300 font-medium transition-colors">
+              <Link href="/knowledge" className="text-slate-300 hover:text-amber-300 font-medium transition-colors" aria-label="Navigate to Knowledge page">
                 KNOWLEDGE
               </Link>
-              <Link href="/strategy-live" className="text-slate-300 hover:text-amber-300 font-medium transition-colors">
+              <Link href="/strategy-live" className="text-slate-300 hover:text-amber-300 font-medium transition-colors" aria-label="Navigate to Strategy Live page">
                 STRATEGY LIVE
               </Link>
             </nav>
@@ -111,8 +118,9 @@ export default function Home() {
       </header>
 
       {/* Hero Section with Background */}
-      <section className="relative py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">        
-        <div className="relative max-w-7xl mx-auto">
+      <main id="main-content">
+        <section className="relative py-32 px-4 sm:px-6 lg:px-8 overflow-hidden" aria-label="Hero section with company introduction">        
+          <div className="relative max-w-7xl mx-auto">
           {/* System Status */}
           <div className="text-center mb-16">
             <div className="inline-flex items-center space-x-3 bg-slate-900/60 backdrop-blur-xl border border-amber-400/20 rounded-xl px-6 py-3 mb-8 shadow-lg shadow-amber-900/20">
@@ -251,14 +259,17 @@ export default function Home() {
                   {/* Main Globe */}
                   <div className="relative rounded-full overflow-hidden border-2 border-amber-400/30 shadow-2xl shadow-amber-500/20">
                     <Image
-                      src={getImageSrc('earth', 'earth_daymap', 1200) || '/images/earth_daymap.jpg'}
+                      src="/imagery/processed/earth/earth_daymap-1200w.webp"
                       alt="HISL Global Network"
                       width={384}
                       height={384}
-                      className="w-full h-full object-cover rounded-full animate-spin opacity-90"
-                      style={{ animationDuration: '60s' }}
+                      className="w-full h-full object-cover rounded-full opacity-90"
+                      style={{ 
+                        animation: 'rotateGlobe 60s linear infinite',
+                        transformStyle: 'preserve-3d'
+                      }}
                       placeholder="blur"
-                      blurDataURL={getLQIP('earth', 'earth_daymap') || ''}
+                      blurDataURL="/imagery/processed/earth/earth_daymap-lqip.webp"
                     />
                   </div>
                   
@@ -270,11 +281,13 @@ export default function Home() {
                         <div className="relative">
                           <div className="absolute inset-0 bg-emerald-400/20 rounded-full blur-sm w-8 h-8"></div>
                           <Image
-                            src={getImageSrc('ravens', 'raven_huginn', 1200) || '/images/raven_huginn.png'}
+                            src="/imagery/processed/ravens/raven_huginn-1200w.webp"
                             alt="Huginn"
                             width={40}
                             height={40}
                             className="relative opacity-90 drop-shadow-lg"
+                            placeholder="blur"
+                            blurDataURL="/imagery/processed/ravens/raven_huginn-lqip.webp"
                           />
                         </div>
                       </div>
@@ -286,11 +299,13 @@ export default function Home() {
                         <div className="relative">
                           <div className="absolute inset-0 bg-teal-400/20 rounded-full blur-sm w-7 h-7"></div>
                           <Image
-                            src={getImageSrc('ravens', 'raven_muninn', 1200) || '/images/raven_muninn.png'}
+                            src="/imagery/processed/ravens/raven_muninn-1200w.webp"
                             alt="Muninn"
                             width={35}
                             height={35}
                             className="relative opacity-90 drop-shadow-lg"
+                            placeholder="blur"
+                            blurDataURL="/imagery/processed/ravens/raven_muninn-lqip.webp"
                           />
                         </div>
                       </div>
@@ -361,6 +376,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      </main>
 
       {/* Industrial Solutions Section */}
       <section className="relative py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-900/50 to-slate-800/30">
@@ -376,11 +392,25 @@ export default function Home() {
           </div>
           
           <div className="grid lg:grid-cols-3 gap-8">
-            {solutions.map((solution) => (
+            {solutions.map((solution, index) => (
               <div 
                 key={solution.name} 
-                className="group bg-slate-900/60 backdrop-blur-xl border border-amber-400/20 rounded-2xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-amber-500/10 hover:border-amber-400/40"
+                className="group bg-slate-900/60 backdrop-blur-xl border border-amber-400/20 rounded-2xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-amber-500/10 hover:border-amber-400/40 relative overflow-hidden"
               >
+                {/* Add cinematic background for Construction Safety */}
+                {solution.name === "Construction Safety" && (
+                  <div className="absolute inset-0 opacity-10 group-hover:opacity-20 transition-opacity duration-500">
+                    <Image
+                      src="/imagery/processed/general/ai_construction_bridge-2400w.webp"
+                      alt="Industrial Construction Background"
+                      fill
+                      className="object-cover rounded-2xl"
+                      placeholder="blur"
+                      blurDataURL="/imagery/processed/general/ai_construction_bridge-lqip.webp"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/70 to-transparent"></div>
+                  </div>
+                )}
                 <div className="text-center mb-6">
                   <div className="text-6xl mb-4 filter drop-shadow-lg">{solution.icon}</div>
                   <h3 className="text-2xl font-bold text-amber-300 mb-2 group-hover:text-amber-200 transition-colors">
