@@ -8,5 +8,8 @@
   "/deploy/page": "app/deploy/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
   "/globe/page": "app/globe/page.js",
-  "/page": "app/page.js"
+  "/knowledge/page": "app/knowledge/page.js",
+  "/page": "app/page.js",
+  "/projects/page": "app/projects/page.js",
+  "/strategy-live/page": "app/strategy-live/page.js"
 }

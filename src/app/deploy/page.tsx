@@ -21,7 +21,7 @@ export default function DeployPage() {
 
   const handleSubmit = async () => {
     // This would normally submit to /api/broker/submit
-    console.log("Deployment assessment:", formData);
+    // Removed console.log for production
     alert("Assessment submitted! You will receive deployment recommendations shortly.");
   };
 

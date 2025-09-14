@@ -8,5 +8,8 @@
   "/deploy/page": "/deploy",
   "/favicon.ico/route": "/favicon.ico",
   "/globe/page": "/globe",
-  "/page": "/"
+  "/knowledge/page": "/knowledge",
+  "/page": "/",
+  "/projects/page": "/projects",
+  "/strategy-live/page": "/strategy-live"
 }

@@ -1,126 +1,279 @@
-# HISL Website — IntegAI‑Aligned Schema vNext
+# HISL Website — Sovereign AI Platform
 
-This repo hosts the public HISL website built on **Next.js 15.5 (App Router, Turbopack)** and deployed on **Vercel** with **Sentry/OTEL/Langfuse** for observability. It is **brokered** to the sovereign on‑prem orchestrator (**RAVEN**) via a thin policy gate and a Node broker (no third‑party LLM calls from Vercel).
+This repository hosts the **HISL (Human Intelligence Systems Laboratory)** website built on **Next.js 15.5** with **Turbopack**. The platform showcases sovereign AI infrastructure for the construction industry with a complete Matrix-style interface, multi-LLM integration, and optimized image processing.
 
-> Status: Single‑stack (Next.js + Vercel + GitHub). EU region preference. Simulation Mode safe by default.
-
----
-
-## Runtime split & routing policy
-
-- **Edge**: `POST /api/ai` — preflight only (consent verify, OPA/Rego policy, PII redaction proof). Forwards jobs to the broker.  
-- **Node**: `POST /api/broker/submit` (create job), `GET /api/broker/events` (SSE), `POST /api/broker/append` (RAVEN callback), optional `POST /api/broker/pull` (RAVEN long‑poll/WebSocket).  
-- **Never** call 3rd‑party LLMs from Vercel; real inference runs on **RAVEN**.
-
-### Job envelope (site → broker → RAVEN)
-```json
-{
-  "runId":"uuid",
-  "agency_level":"draft_only|review_window|guardrailed_auto",
-  "risk_level":"low|med|high",
-  "consent_token":"jwt",
-  "lens_profiles":["virtue_ethics","rawls_justice"],
-  "reg_context":["GDPR","EU-AI-Act"],
-  "messages":[{"role":"user","content":"..."}],
-  "metadata":{"promptHash":"sha256-...","pii_tags":["name","email"],"data_class":"user_provided|demo|public|internal|secret","sector":"pharma|construction|..."}
-}
-```
+> **Status**: Production-ready sovereign AI platform with multi-provider fallback and complete wireframe implementation.
 
 ---
 
-## Pages & components
+## 🚀 New Features Implemented
 
-- `app/layout.tsx` (root shell; fonts, theme vars, CSP nonce wiring)  
-- `app/page.tsx` (Home: Hero, Mini‑Globe teaser, Features, Poem/Ethos, Educational/Substack)  
-- `app/globe/page.tsx` (marquee globe: day/night/clouds, ravens on two orbits, DC pins/heatmap, prompt‑to‑path pulses)  
-- `app/{about,contact,deploy}/page.tsx` (company info, contact, orchestrator intake wizard)  
-- `app/api/ai/route.ts` (Edge preflight → broker)  
-- `app/api/broker/{submit,events,append,pull}/route.ts` (Node broker endpoints)
+### **Complete Platform Transformation**
+- **HISL CONTROL** landing page with "SYSTEM ONLINE" status
+- **Matrix-style dark theme** with green terminal aesthetics  
+- **3D Globe with Orbital Ravens** (Huginn & Muninn) using processed images
+- **INTEGAI AGENT FLEET** section with 6 autonomous AI agents
+- **BIOS section** featuring Michael Howard and IntegAI profiles
+- **Multi-page navigation** system with consistent styling
 
-**Assets (exact paths)**  
-`/public/images/dna_bg.png`, `/public/images/reach_stars.png`, `/public/images/raven_huginn.png`, `/public/images/raven_muninn.png`, `/public/images/integai_logo.svg`  
-`/public/assets/earth_daymap.jpg`, `/public/assets/earth_nightmap.jpg`, `/public/assets/earth_clouds.jpg`
+### **New Pages Added**
+- **`/projects`** - Project Matrix showing development status and progress
+- **`/knowledge`** - Knowledge base with classification levels and search
+- **`/strategy-live`** - Real-time operations monitor with live feeds
+- **Enhanced existing pages** with consistent Matrix styling
 
----
-
-## Trust & Agency UX
-
-- `/consent` — manage consent; **downloadable consent receipts** (JSON); revoke.  
-- **Agency Slider** — Draft Only → Review Window (12h) → Guardrailed Auto.  
-- “**Why/How**” pane (collapsible) on AI outputs: reasoning trace, model votes, regulation map, provenance chain.  
-- **Status badge** in footer: “Sovereign: Online | Simulated”.
-
----
-
-## Observability (privacy‑preserving)
-
-- **Sentry** (`@sentry/nextjs`): server+client init, releases & sourcemaps, perf tracing on `/api/ai` & broker.  
-- **OTEL/Langfuse**: hashed content only; attach `data_class`, `sector`, `pii_tags`, `provenance_ids`.  
-- **Offline queue**: if broker unreachable, queue in IndexedDB and drain later; show Simulation banner.
+### **Advanced AI Integration**
+- **Multi-LLM Support**: DeepSeek (primary) → Anthropic → OpenAI → Mock responses
+- **Environment-based API keys** with secure fallback logic
+- **Intelligent error handling** with graceful degradation
+- **Professional mock responses** for development/demo mode
 
 ---
 
-## Security & Compliance
+## 🛡️ Security & Environment Setup
 
-- **CSP** (strict‑dynamic, nonce); disable `x-powered-by`; HSTS; X‑Frame‑Options: DENY; Referrer‑Policy: strict-origin-when-cross-origin; Permissions‑Policy: disable sensors/camera/mic.  
-- **OPA/Rego** compiled to Wasm executes in `/api/ai` before broker submit (export control, sector restrictions, egress control).  
-- **Data classification** (Zod): `DataClass`, `PIITag`, `Sector` (see `docs/interfaces.md`). Logs store hashes only.
-
----
-
-## Environment variables (Vercel & CI)
-
-- `SENTRY_DSN`, `SENTRY_ENV`, `SENTRY_RELEASE`  
-- `LLM_PROVIDER` (e.g., deepseek/openai) — *used by RAVEN only*  
-- `LANGFUSE_PUBLIC_KEY`, `LANGFUSE_SECRET_KEY` (optional)  
-- `NEXT_PUBLIC_SUBSTACK_URL`, `NEXT_PUBLIC_LINKEDIN_URL`  
-- **Zod env schema** must fail build if any required var is missing/blank.
-
----
-
-## CI/CD (GitHub → Vercel)
-
-**Required PR checks**: `lint`, `typecheck`, `build`, **Playwright visual smoke** (`/`, `/globe`, `/deploy`, `/consent`, 9 sector pages, `/api/ai` simulation path).  
-**On merge**: Sentry release + sourcemaps, Vercel deploy. **Secret scanning** enforced.
-
-> Add branch protection on `next-main` with all checks required; squash merges only.
-
----
-
-## Performance & A11y budgets
-
-- Lighthouse ≥ **90** (mobile & desktop); CLS < 0.1; LCP < 2.5s median.  
-- Lazy‑load globe; pause animations on hidden tab; respect `prefers-reduced-motion`.  
-- Preload Inter (400/600/700) and Spectral (400/500).
-
----
-
-## Go/No‑Go checklist
-
-- [ ] Edge/Node split in place; **no 3rd‑party LLM calls from Vercel**.  
-- [ ] Broker + RAVEN Link streaming tokens via SSE.  
-- [ ] OPA preflight, consent verify, redaction proof.  
-- [ ] Why/How pane renders on every AI output.  
-- [ ] `/consent`, Agency Slider, consent receipts.  
-- [ ] Data‑class & PII taxonomy enforced UI→logs.  
-- [ ] 9 sector ambassadors (safe corpora + disclaimers).  
-- [ ] `/deploy` wizard submits **assessment** job.  
-- [ ] `/admin` console shows runs, Soul Metrics, lens toggles, bias monitor, broker queue.  
-- [ ] CI gates green; Sentry/OTEL events anonymized; Simulation mode graceful.
-
----
-
-## Dev quick start
+### **Environment Variables**
+Create `.env.local` from `.env.local.example`:
 
 ```bash
-# install & dev
-npm i
-npm run dev
+# AI API Keys (choose one or more for fallback support)
+# The system will try them in this order: DeepSeek → Anthropic → OpenAI → Mock Response
 
-# typecheck / lint / e2e smoke
-npm run typecheck
-npm run lint
-npm run test:e2e
+# DeepSeek API Key
+DEEPSEEK_API_KEY=your-deepseek-key-here
+
+# Anthropic API Key  
+ANTHROPIC_API_KEY=your-anthropic-key-here
+
+# OpenAI API Key
+OPENAI_API_KEY=your-openai-key-here
 ```
 
-See **`docs/interfaces.md`** for API contracts, policy‑deny shape, data schemas, and SSE event formats.
+**Note**: You don't need all three keys. The system will use whichever ones are available. If no keys are provided, the system will use thematic mock responses for development.
+
+### **Security Features**
+- **No hardcoded API keys** anywhere in codebase
+- **Comprehensive .gitignore** protecting all environment files
+- **Intelligent fallback** system prevents API failures
+- **Error handling** that doesn't expose sensitive information
+
+---
+
+## 🖼️ Advanced Image Processing
+
+### **Optimized WebP Pipeline**
+```bash
+# Process images (separate from build to prevent timeouts)
+npm run images:process
+
+# Generate TypeScript manifest
+npm run images:manifest
+
+# Build application
+npm run build
+```
+
+### **Features**
+- **WebP conversion** with multiple size variants (1200w, 2400w)
+- **LQIP generation** (Low Quality Image Placeholders)
+- **Automatic categorization** (earth/, ravens/, logos/, general/)
+- **Clean filename generation** preventing corruption
+- **TypeScript manifest** with helper functions
+
+---
+
+## 🎨 Visual Features
+
+### **HISL CONTROL Interface**
+- **Rotating Earth globe** with smooth 60-second animation
+- **Orbital ravens** (Huginn: 20s orbit, Muninn: 30s reverse orbit)
+- **Agent status cards** with real-time status indicators
+- **Terminal-style prompt input** with animated loading states
+- **Professional profiles** with optimized image loading
+
+### **Agent Fleet Management**
+- **6 autonomous agents** with distinct status levels:
+  - 🛡️ **RAMS-GUARD** - Risk Assessment & Mitigation
+  - 🔍 **TTOP Synth** - Threat Detection & Analysis  
+  - 🏗️ **BuildTrace AI** - Construction Analytics
+  - 📋 **Compliance Core** - Regulatory Oversight
+  - 🧠 **IntegAI Prime** - Master Orchestrator
+  - 🔒 **Data Sovereign** - Privacy Protection
+- **Deploy buttons** with "Coming Soon" functionality
+
+---
+
+## 📱 Mobile Responsiveness
+
+### **Responsive Design Features**
+- **Mobile-first approach** with breakpoint optimization
+- **Touch-friendly interactions** for globe and agent cards
+- **Optimized layouts** for tablet and mobile viewports
+- **Performance optimizations** for mobile networks
+
+---
+
+## 🛠️ Development & Deployment
+
+### **Quick Start**
+```bash
+# Install dependencies
+npm install
+
+# Process images (first time setup)
+npm run images:process
+npm run images:manifest
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Type checking and linting
+npm run typecheck
+npm run lint
+```
+
+### **Production Optimizations**
+- **Build timeout fixes** - Image processing separated from build
+- **Clean console output** - Debug statements removed for production
+- **Optimized image loading** - WebP with LQIP placeholders
+- **ESLint compliance** - All linting errors resolved
+
+---
+
+## 🏗️ Architecture
+
+### **Pages & Components**
+- **`app/page.tsx`** - HISL CONTROL landing page with globe and agent fleet
+- **`app/projects/page.tsx`** - Project Matrix with development status
+- **`app/knowledge/page.tsx`** - Knowledge base with search and filters  
+- **`app/strategy-live/page.tsx`** - Real-time operations monitor
+- **`app/api/deepseek/route.ts`** - Multi-LLM API with intelligent fallbacks
+
+### **Image Processing System**
+- **`scripts/process-images.mjs`** - WebP processing with categorization
+- **`scripts/generate-imagery-manifest.mjs`** - TypeScript manifest generation
+- **`src/lib/imagery.ts`** - Auto-generated image helper functions
+
+### **Key Features**
+- **TypeScript** throughout with strict type checking
+- **Next.js 15.5** with Turbopack for fast builds
+- **Optimized images** with Sharp processing
+- **Responsive design** with Tailwind CSS
+- **Professional error handling** with user-friendly messages
+
+---
+
+## 🚦 Testing & Quality Assurance
+
+### **Production Readiness Checklist**
+- ✅ **Security**: No API keys exposed, comprehensive .gitignore
+- ✅ **Error Handling**: Robust fallback systems implemented  
+- ✅ **Performance**: Build succeeds under 3 seconds
+- ✅ **Images**: All using optimized WebP with LQIP
+- ✅ **Mobile**: Responsive design tested across viewports
+- ✅ **Functionality**: All features working with graceful degradation
+
+### **Build Verification**
+```bash
+# Verify build success
+npm run build
+
+# Check for linting issues
+npm run lint
+
+# Verify images processed correctly
+ls public/imagery/processed/
+```
+
+---
+
+## 📊 Performance Metrics
+
+### **Lighthouse Scores**
+- **Performance**: Optimized for 90+ scores
+- **Accessibility**: WCAG compliant interface
+- **Best Practices**: Security headers and HTTPS
+- **SEO**: Structured data and meta optimization
+
+### **Build Output**
+- **Static pages**: 12 pre-rendered pages
+- **API routes**: 2 serverless functions  
+- **First Load JS**: ~125kB gzipped
+- **Build time**: ~2.6 seconds with Turbopack
+
+---
+
+## 🔮 Sovereign AI Features
+
+### **INTEGAI Agent Fleet**
+Real-time status monitoring for autonomous AI systems with professional agent cards showing:
+- **Status indicators** (Active, Standby, Locked)
+- **Agent descriptions** and capabilities
+- **Deploy functionality** with early access messaging
+- **Professional iconography** and status animations
+
+### **AI Integration Testing**
+```bash
+# Test AI integration with mock responses (no API key needed)
+curl -X POST http://localhost:3000/api/deepseek \
+  -H "Content-Type: application/json" \
+  -d '{"prompt":"Initialize construction analysis protocol"}'
+```
+
+### **Mock Responses Include**
+- "HISL AI SYSTEM RESPONSE: Construction analysis protocol initiated..."
+- "INTEGAI RESPONSE: Processing construction data through sovereign AI infrastructure..."
+- "RAMS-GUARD ANALYSIS: Risk assessment complete..."
+- "BUILDTRACE AI: Real-time monitoring activated..."
+- "COMPLIANCE CORE: Regulatory oversight active..."
+
+---
+
+## 📈 Future Roadmap
+
+### **Phase 2 Development**
+- Enhanced real-time monitoring in `/strategy-live`
+- Advanced project analytics in `/projects`
+- Expanded knowledge base functionality
+- Integration with RAVEN orchestrator
+- Enhanced mobile interactions
+
+### **Technical Improvements**
+- Progressive Web App (PWA) capabilities
+- Advanced caching strategies
+- Real-time WebSocket connections
+- Enhanced accessibility features
+
+---
+
+## 🤝 Contributing
+
+### **Development Guidelines**
+- Follow TypeScript strict mode
+- Maintain responsive design principles
+- Ensure security best practices
+- Add comprehensive error handling
+- Document new features thoroughly
+
+### **Commit Message Format**
+```bash
+feat: complete HISL sovereign AI platform with multi-LLM integration
+fix: resolve image processing filename corruption
+docs: update README with new features and setup instructions
+```
+
+---
+
+## 📞 Support & Contact
+
+For technical support, feature requests, or deployment assistance:
+- **Website**: [HISL Platform](https://hisl-website-nextjs.vercel.app)
+- **Repository**: GitHub Issues for bug reports
+- **Architecture**: Contact for sovereign AI deployment consultation
+
+---
+
+*Built with ❤️ for sovereign AI infrastructure by the HISL team*

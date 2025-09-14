@@ -67,6 +67,24 @@
       "regex": "^/globe(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/globe(?:/)?$"
+    },
+    {
+      "page": "/knowledge",
+      "regex": "^/knowledge(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/knowledge(?:/)?$"
+    },
+    {
+      "page": "/projects",
+      "regex": "^/projects(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/projects(?:/)?$"
+    },
+    {
+      "page": "/strategy-live",
+      "regex": "^/strategy\\-live(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/strategy\\-live(?:/)?$"
     }
   ],
   "dataRoutes": [],

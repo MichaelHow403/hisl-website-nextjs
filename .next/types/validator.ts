@@ -77,10 +77,28 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
   handler satisfies AppPageConfig<"/globe">
 }
 
+// Validate ../../src/app/knowledge/page.tsx
+{
+  const handler = {} as typeof import("../../src/app/knowledge/page.js")
+  handler satisfies AppPageConfig<"/knowledge">
+}
+
 // Validate ../../src/app/page.tsx
 {
   const handler = {} as typeof import("../../src/app/page.js")
   handler satisfies AppPageConfig<"/">
+}
+
+// Validate ../../src/app/projects/page.tsx
+{
+  const handler = {} as typeof import("../../src/app/projects/page.js")
+  handler satisfies AppPageConfig<"/projects">
+}
+
+// Validate ../../src/app/strategy-live/page.tsx
+{
+  const handler = {} as typeof import("../../src/app/strategy-live/page.js")
+  handler satisfies AppPageConfig<"/strategy-live">
 }
 
 // Validate ../../src/app/api/deepseek/route.ts
