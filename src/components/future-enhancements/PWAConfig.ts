@@ -132,7 +132,7 @@ export const serviceWorkerConfig = {
 
 // Installation prompt handling
 export class PWAInstaller {
-  private deferredPrompt: any = null;
+  private deferredPrompt: unknown = null;
   
   constructor() {
     if (typeof window !== 'undefined') {
@@ -148,8 +148,9 @@ export class PWAInstaller {
       return false;
     }
 
-    this.deferredPrompt.prompt();
-    const { outcome } = await this.deferredPrompt.userChoice;
+    const prompt = this.deferredPrompt as { prompt: () => void; userChoice: Promise<{ outcome: string }> };
+    prompt.prompt();
+    const { outcome } = await prompt.userChoice;
     this.deferredPrompt = null;
     
     return outcome === 'accepted';

@@ -4,7 +4,7 @@
 interface AnalyticsEvent {
   name: string;
   category: 'engagement' | 'conversion' | 'performance' | 'error' | 'user_journey';
-  properties?: Record<string, any>;
+  properties?: Record<string, unknown>;
   timestamp?: Date;
 }
 
@@ -46,10 +46,14 @@ class AnalyticsTracker {
     this.sendToProviders(enrichedEvent);
   }
 
-  private async sendToProviders(event: any): Promise<void> {
+  private async sendToProviders(event: unknown): Promise<void> {
     // Vercel Analytics
-    if (typeof window !== 'undefined' && (window as any).va) {
-      (window as any).va('track', event.name, event.properties);
+    if (typeof window !== 'undefined') {
+      const windowWithVA = window as unknown as { va?: (action: string, name: string, properties?: Record<string, unknown>) => void };
+      const eventObj = event as { name: string; properties?: Record<string, unknown> };
+      if (windowWithVA.va) {
+        windowWithVA.va('track', eventObj.name, eventObj.properties);
+      }
     }
 
     // Custom analytics endpoint (future)
@@ -72,7 +76,7 @@ class AnalyticsTracker {
   }
 
   // Specific event methods
-  pageView(page: string, properties?: Record<string, any>): void {
+  pageView(page: string, properties?: Record<string, unknown>): void {
     this.track({
       name: 'page_view',
       category: 'engagement',
@@ -140,7 +144,7 @@ class AnalyticsTracker {
     this.track({
       name: 'user_journey_step',
       category: 'user_journey',
-      properties: step
+      properties: step as unknown as Record<string, unknown>
     });
   }
 
@@ -190,9 +194,13 @@ export function initializePerformanceTracking(): void {
   // Cumulative Layout Shift (CLS)
   let clsValue = 0;
   const clsObserver = new PerformanceObserver((list) => {
-    for (const entry of list.getEntries() as any[]) {
-      if (!entry.hadRecentInput) {
-        clsValue += entry.value;
+    for (const entry of list.getEntries()) {
+      const layoutShiftEntry = entry as PerformanceEntry & {
+        hadRecentInput?: boolean;
+        value: number;
+      };
+      if (!layoutShiftEntry.hadRecentInput) {
+        clsValue += layoutShiftEntry.value;
       }
     }
     analytics.performanceMetric('cls', clsValue);

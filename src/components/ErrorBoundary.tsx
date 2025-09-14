@@ -1,5 +1,6 @@
 'use client';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
+import Link from 'next/link';
 import { analytics } from '@/lib/analytics';
 
 interface Props {
@@ -38,8 +39,9 @@ export class ErrorBoundary extends Component<Props, State> {
     // Report to Sentry in production
     if (process.env.NODE_ENV === 'production' && typeof window !== 'undefined') {
       // Sentry error reporting (if configured)
-      if ((window as any).Sentry) {
-        (window as any).Sentry.captureException(error, {
+      const windowWithSentry = window as unknown as { Sentry?: { captureException: (error: Error, options?: unknown) => void } };
+      if (windowWithSentry.Sentry) {
+        windowWithSentry.Sentry.captureException(error, {
           contexts: {
             react: {
               componentStack: errorInfo.componentStack,
@@ -190,9 +192,9 @@ export function NavigationErrorBoundary({ children }: { children: ReactNode }) {
       fallback={
         <div className="bg-slate-900/80 border border-amber-400/20 rounded p-4">
           <div className="text-amber-400 font-semibold">Navigation Error</div>
-          <a href="/" className="text-amber-300 text-sm hover:underline">
+          <Link href="/" className="text-amber-300 text-sm hover:underline">
             Return to Home
-          </a>
+          </Link>
         </div>
       }
     >
@@ -216,8 +218,9 @@ export function useErrorReporting() {
     analytics.errorOccurred(error, context);
     
     if (process.env.NODE_ENV === 'production' && typeof window !== 'undefined') {
-      if ((window as any).Sentry) {
-        (window as any).Sentry.captureException(error);
+      const windowWithSentry = window as unknown as { Sentry?: { captureException: (error: Error) => void } };
+      if (windowWithSentry.Sentry) {
+        windowWithSentry.Sentry.captureException(error);
       }
     } else {
       console.error('Reported error:', error, context);

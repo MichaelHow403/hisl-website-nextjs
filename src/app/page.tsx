@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { getImageSrc, getLQIP } from "@/lib/imagery";
+import { getLQIP } from "@/lib/imagery";
 
 export default function Home() {
   const [prompt, setPrompt] = useState("");
@@ -392,7 +392,7 @@ export default function Home() {
           </div>
           
           <div className="grid lg:grid-cols-3 gap-8">
-            {solutions.map((solution, index) => (
+            {solutions.map((solution) => (
               <div 
                 key={solution.name} 
                 className="group bg-slate-900/60 backdrop-blur-xl border border-amber-400/20 rounded-2xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-amber-500/10 hover:border-amber-400/40 relative overflow-hidden"

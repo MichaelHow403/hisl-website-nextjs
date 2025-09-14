@@ -2,7 +2,6 @@
 // Future Enhancement - Phase 1 (Q1 2024)
 
 'use client';
-import { useState } from 'react';
 
 interface WhatsAppWidgetProps {
   businessNumber?: string;
@@ -15,8 +14,6 @@ export default function WhatsAppWidget({
   message = "Hello HISL, I'm interested in your construction AI solutions...",
   enabled = false // Set to true when ready to deploy
 }: WhatsAppWidgetProps) {
-  const [isVisible, setIsVisible] = useState(false);
-
   // Early return if not enabled - for future activation
   if (!enabled) {
     return null;

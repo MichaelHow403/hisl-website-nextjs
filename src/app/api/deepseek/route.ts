@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
 // Mock response for when no API keys are available
-const generateMockResponse = (_prompt: string): string => {
+const generateMockResponse = (prompt: string): string => {
   const responses = [
     "HISL AI SYSTEM RESPONSE: Construction analysis protocol initiated. Analyzing structural parameters and compliance requirements...",
     "INTEGAI RESPONSE: Processing construction data through sovereign AI infrastructure. Recommendations will be generated based on current building standards.",
@@ -9,6 +9,16 @@ const generateMockResponse = (_prompt: string): string => {
     "BUILDTRACE AI: Real-time monitoring activated. Construction analytics pipeline ready for data processing.",
     "COMPLIANCE CORE: Regulatory oversight active. All submitted plans will be evaluated against current building codes and regulations."
   ];
+  
+  // Add context-aware response based on prompt keywords
+  const lowerPrompt = prompt.toLowerCase();
+  if (lowerPrompt.includes('safety')) {
+    return "HISL AI SAFETY MODULE: Safety analysis complete. Construction safety protocols have been reviewed and recommendations are available.";
+  } else if (lowerPrompt.includes('compliance') || lowerPrompt.includes('regulation')) {
+    return "COMPLIANCE CORE: Regulatory analysis complete. All construction parameters meet current building codes and regulations.";
+  } else if (lowerPrompt.includes('risk')) {
+    return "RAMS-GUARD ANALYSIS: Risk assessment protocol executed. Construction risk factors have been identified and mitigation strategies prepared.";
+  }
   
   const randomIndex = Math.floor(Math.random() * responses.length);
   return responses[randomIndex];
