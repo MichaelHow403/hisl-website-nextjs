@@ -1,0 +1,55 @@
+version: 2
+updates:
+  # Next.js ecosystem
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+      time: "06:00"
+      timezone: "Europe/Dublin"
+    open-pull-requests-limit: 10
+    groups:
+      nextjs:
+        patterns:
+          - "next*"
+          - "@next/*"
+      react:
+        patterns:
+          - "react*"
+          - "@types/react*"
+      build-tools:
+        patterns:
+          - "typescript"
+          - "eslint*"
+          - "@typescript-eslint/*"
+          - "tailwindcss"
+      ai-apis:
+        patterns:
+          - "anthropic*"
+          - "openai*"
+          - "@google-ai/*"
+      monitoring:
+        patterns:
+          - "@sentry/*"
+          - "posthog*"
+    commit-message:
+      prefix: "deps"
+      include: "scope"
+    reviewers:
+      - "MichaelHow403"
+    assignees:
+      - "MichaelHow403"
+    labels:
+      - "dependencies"
+      - "security"
+    
+  # GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "06:00"
+      timezone: "Europe/Dublin"
+    commit-message:
+      prefix: "ci"
