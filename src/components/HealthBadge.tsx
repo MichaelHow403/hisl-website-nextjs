@@ -38,7 +38,7 @@ export default function HealthBadge() {
           lastChecked: new Date().toLocaleTimeString()
         });
       }
-    } catch (error) {
+    } catch {
       setHealth({
         status: 'error',
         lastChecked: new Date().toLocaleTimeString()

@@ -9,7 +9,7 @@ if (typeof window !== 'undefined' && process.env.NEXT_PUBLIC_POSTHOG_KEY) {
   // Check for Do Not Track
   const doNotTrack = navigator.doNotTrack === '1' || 
                     navigator.doNotTrack === 'yes' || 
-                    (window as any).doNotTrack === '1';
+                    (window as unknown as Record<string, unknown>).doNotTrack === '1';
   
   if (!doNotTrack) {
     posthog.init(process.env.NEXT_PUBLIC_POSTHOG_KEY, {
@@ -70,13 +70,13 @@ export function PostHogProvider({ children }: PostHogProviderProps) {
 }
 
 // Helper functions for tracking events
-export const trackEvent = (eventName: string, properties?: Record<string, any>) => {
+export const trackEvent = (eventName: string, properties?: Record<string, unknown>) => {
   if (typeof window !== 'undefined' && posthog.__loaded) {
     posthog.capture(eventName, properties);
   }
 };
 
-export const identifyUser = (userId: string, properties?: Record<string, any>) => {
+export const identifyUser = (userId: string, properties?: Record<string, unknown>) => {
   if (typeof window !== 'undefined' && posthog.__loaded) {
     posthog.identify(userId, properties);
   }

@@ -6,11 +6,6 @@ import * as THREE from 'three';
 import GlobeScene from './GlobeScene';
 import { DataCenter, DATA_CENTERS, latLngToVector3, REGIONS, PROVIDERS } from '@/data/data-centers';
 
-interface PromptSubmission {
-  prompt: string;
-  agentId: string;
-  context?: string;
-}
 
 interface SimulationResult {
   hops: DataCenter[];
@@ -106,8 +101,8 @@ export default function GlobeVisualizer() {
       setShowPulse(true);
 
       // Track with PostHog if available
-      if (typeof window !== 'undefined' && (window as any).posthog) {
-        (window as any).posthog.capture('globe_simulation_run', {
+      if (typeof window !== 'undefined' && (window as unknown as Record<string, unknown>).posthog) {
+        ((window as unknown as Record<string, unknown>).posthog as unknown as { capture: (event: string, props: Record<string, unknown>) => void }).capture('globe_simulation_run', {
           hops: hops.length,
           page: 'globe',
           agentId,

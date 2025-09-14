@@ -27,7 +27,7 @@ function Earth() {
     texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
   });
 
-  useFrame((state) => {
+  useFrame(() => {
     if (earthRef.current) {
       earthRef.current.rotation.y += 0.002; // Slow rotation
     }
@@ -48,7 +48,7 @@ function Earth() {
 function Clouds() {
   const cloudsRef = useRef<THREE.Mesh>(null);
 
-  useFrame((state) => {
+  useFrame(() => {
     if (cloudsRef.current) {
       cloudsRef.current.rotation.y += 0.001; // Slower than earth
     }
@@ -85,7 +85,7 @@ function DataCenterPin({
     return [pos.x, pos.y, pos.z] as [number, number, number];
   }, [dataCenter.coordinates]);
 
-  useFrame((state) => {
+  useFrame(() => {
     if (pinRef.current) {
       const scale = isSelected ? 1.5 : hovered ? 1.2 : 1.0;
       pinRef.current.scale.setScalar(scale);

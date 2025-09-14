@@ -106,8 +106,8 @@ export default async function PoemPage() {
             {/* Quote */}
             <div className="mt-16 text-center">
               <blockquote className="text-2xl md:text-3xl font-light text-white/90 italic">
-                "In every packet, every byte,<br />
-                Lives the promise of what's right"
+                &quot;In every packet, every byte,<br />
+                Lives the promise of what&apos;s right&quot;
               </blockquote>
               <cite className="text-gray-400 text-sm mt-4 block">
                 — From "The Digital Constellation"
