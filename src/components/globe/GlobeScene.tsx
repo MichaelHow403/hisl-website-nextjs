@@ -4,6 +4,7 @@ import { useRef, useMemo, useEffect, useState } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { OrbitControls, Sphere, useTexture } from '@react-three/drei';
 import * as THREE from 'three';
+import Image from 'next/image';
 import { DataCenter, latLngToVector3 } from '@/data/data-centers';
 import { pickBest } from '@/lib/imagery';
 
@@ -269,7 +270,7 @@ export default function GlobeScene({
       if (!gl) {
         setWebGLSupported(false);
       }
-    } catch (e) {
+    } catch {
       setWebGLSupported(false);
     }
   }, []);
@@ -292,10 +293,11 @@ export default function GlobeScene({
     
     return (
       <div className={`bg-black rounded-lg relative overflow-hidden ${className}`}>
-        <img 
+        <Image 
           src={fallbackImage}
           alt="Starfield - Where Your Prompts Go"
-          className="w-full h-full object-cover"
+          fill
+          className="object-cover"
         />
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-white text-center p-4 bg-black/50 rounded">

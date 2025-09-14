@@ -63,7 +63,7 @@ export default async function PoemPage() {
                   The Vision
                 </h3>
                 <p className="text-gray-300 text-sm leading-relaxed">
-                  This poem captures the essence of HISL's mission: creating a global network 
+                  This poem captures the essence of HISL&rsquo;s mission: creating a global network
                   of sovereign intelligence that serves humanity while preserving individual 
                   autonomy and dignity.
                 </p>
@@ -107,10 +107,10 @@ export default async function PoemPage() {
             <div className="mt-16 text-center">
               <blockquote className="text-2xl md:text-3xl font-light text-white/90 italic">
                 &quot;In every packet, every byte,<br />
-                Lives the promise of what&apos;s right&quot;
+                Lives the promise of what&rsquo;s right&quot;
               </blockquote>
               <cite className="text-gray-400 text-sm mt-4 block">
-                — From "The Digital Constellation"
+                — From &ldquo;The Digital Constellation&rdquo;
               </cite>
             </div>
           </div>
