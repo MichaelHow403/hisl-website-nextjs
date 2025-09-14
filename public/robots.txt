@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://hisl.ai/sitemap.xml
+
+# Disallow sensitive areas
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+
+# Allow specific API endpoints that should be discoverable
+Allow: /api/health
+
+# Crawl delay (optional)
+Crawl-delay: 1

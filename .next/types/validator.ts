@@ -47,6 +47,18 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
 }
 
 
+// Validate ../../src/app/about/integai/page.tsx
+{
+  const handler = {} as typeof import("../../src/app/about/integai/page.js")
+  handler satisfies AppPageConfig<"/about/integai">
+}
+
+// Validate ../../src/app/about/michael/page.tsx
+{
+  const handler = {} as typeof import("../../src/app/about/michael/page.js")
+  handler satisfies AppPageConfig<"/about/michael">
+}
+
 // Validate ../../src/app/about/page.tsx
 {
   const handler = {} as typeof import("../../src/app/about/page.js")
@@ -81,6 +93,12 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
 {
   const handler = {} as typeof import("../../src/app/page.js")
   handler satisfies AppPageConfig<"/">
+}
+
+// Validate ../../src/app/poem/page.tsx
+{
+  const handler = {} as typeof import("../../src/app/poem/page.js")
+  handler satisfies AppPageConfig<"/poem">
 }
 
 // Validate ../../src/app/api/deepseek/route.ts

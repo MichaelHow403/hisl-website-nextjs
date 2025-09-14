@@ -25,14 +25,6 @@ function estimateEnergy(promptLength: number, agentId: string): number {
   return Math.max(0.001, baseEnergy + lengthMultiplier * agentMultiplier);
 }
 
-// Obfuscate any potential PII in logs
-function sanitizeForLogging(text: string): string {
-  // Remove potential email addresses, phone numbers, etc.
-  return text
-    .replace(/\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b/g, '[EMAIL]')
-    .replace(/\b\d{3}-\d{3}-\d{4}\b/g, '[PHONE]')
-    .replace(/\b\d{4}\s?\d{4}\s?\d{4}\s?\d{4}\b/g, '[CARD]');
-}
 
 export async function POST(request: Request) {
   try {
@@ -53,7 +45,6 @@ export async function POST(request: Request) {
     const { agentId, prompt, context } = validation.data;
     
     // Log sanitized request (never log actual content in production)
-    const sanitizedPrompt = sanitizeForLogging(prompt);
     console.log(`[LLM Gateway] Agent: ${agentId}, Prompt length: ${prompt.length}, Context: ${context ? 'provided' : 'none'}`);
 
     // Check for API keys and decide between real API call or mock
@@ -63,7 +54,6 @@ export async function POST(request: Request) {
                      process.env.GOOGLE_API_KEY;
 
     let response: string;
-    let processingTime: number;
     const startTime = Date.now();
 
     if (hasApiKey && process.env.NODE_ENV === 'production') {
@@ -80,7 +70,7 @@ This response was generated through the HISL global infrastructure, demonstratin
       response = MOCK_RESPONSES[agentId as keyof typeof MOCK_RESPONSES] || MOCK_RESPONSES['claude-3-5-sonnet'];
     }
 
-    processingTime = Date.now() - startTime;
+    const processingTime = Date.now() - startTime;
 
     // Calculate energy estimate
     const energyEstimate = estimateEnergy(prompt.length, agentId);
@@ -101,8 +91,6 @@ This response was generated through the HISL global infrastructure, demonstratin
 
   } catch (error: unknown) {
     console.error('[LLM Gateway] Error:', error);
-    
-    const errorMessage = error instanceof Error ? error.message : "An unknown error occurred";
     
     // Never expose internal errors to client
     return NextResponse.json(

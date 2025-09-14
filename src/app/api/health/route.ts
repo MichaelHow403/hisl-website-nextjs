@@ -32,7 +32,7 @@ export async function GET() {
     responseTime,
     checks,
     version: "1.0.0",
-    uptime: process.uptime ? Math.floor(process.uptime()) : null
+    uptime: null // Edge runtime doesn't support process.uptime
   }, {
     status: allHealthy ? 200 : 503
   });

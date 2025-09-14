@@ -12,10 +12,11 @@
     "e2e": "playwright test",
     "images:process": "node scripts/images.process.mjs",
     "images:manifest": "node scripts/generate-imagery-manifest.mjs",
+    "images:all": "npm run images:process && npm run images:manifest",
     "ci:verify": "npm run lint && npm run typecheck && npm run test && npm run build",
     "lighthouse:ci": "lhci autorun",
-    "prebuild": "npm run images:process && npm run images:manifest",
-    "postinstall": "npm run images:process && npm run images:manifest"
+    "prebuild": "npm run images:all",
+    "postinstall": "npm run images:all"
   },
   "dependencies": {
     "@lhci/cli": "^0.15.1",

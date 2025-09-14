@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
+import HealthBadge from "@/components/HealthBadge";
 
 export default function Home() {
   const [prompt, setPrompt] = useState("");
@@ -70,6 +71,7 @@ export default function Home() {
               <a href="#home" className="text-blue-600 font-medium">Home</a>
               <a href="/globe" className="text-gray-700 hover:text-blue-600">Globe</a>
               <a href="/about" className="text-gray-700 hover:text-blue-600">About</a>
+              <a href="/poem" className="text-gray-700 hover:text-blue-600">Poem</a>
               <a href="/contact" className="text-gray-700 hover:text-blue-600">Contact</a>
               <a href="/deploy" className="text-gray-700 hover:text-blue-600">Deploy</a>
               <a href="/consent" className="text-gray-700 hover:text-blue-600">Consent</a>
@@ -433,9 +435,12 @@ export default function Home() {
                 Advancing the frontiers of artificial intelligence through sovereign, 
                 ethical, and human-centered AI systems.
               </p>
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                <span className="text-sm text-gray-300">Sovereign: Online</span>
+              <div className="flex items-center space-x-4">
+                <div className="flex items-center space-x-2">
+                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                  <span className="text-sm text-gray-300">Sovereign: Online</span>
+                </div>
+                <HealthBadge />
               </div>
             </div>
             <div>

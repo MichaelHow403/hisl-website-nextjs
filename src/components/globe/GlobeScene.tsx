@@ -5,7 +5,7 @@ import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { OrbitControls, Sphere, useTexture } from '@react-three/drei';
 import * as THREE from 'three';
 import { DataCenter, latLngToVector3 } from '@/data/data-centers';
-import { getImageSrc } from '@/app/lib/imagery';
+import { pickBest } from '@/lib/imagery';
 
 interface GlobeSceneProps {
   dataCenters: DataCenter[];
@@ -21,7 +21,7 @@ function Earth() {
   const earthRef = useRef<THREE.Mesh>(null);
   
   // Try to get earth texture from imagery manifest, fallback to a solid color
-  const earthTextureSrc = getImageSrc('earth', 'earth_daymap', 2400) || '/images/earth_daymap.jpg';
+  const earthTextureSrc = pickBest('earth/earth_daymap', 2400).src || '/images/earth_daymap.jpg';
   
   const earthTexture = useTexture(earthTextureSrc, (texture) => {
     texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
@@ -288,7 +288,7 @@ export default function GlobeScene({
 
   if (!webGLSupported || prefersReducedMotion) {
     // Fallback to static image
-    const fallbackImage = getImageSrc('starfields', 'reach_for_the_stars', 1200) || '/images/reach_for_the_stars.png';
+    const fallbackImage = pickBest('starfields/reach_for_the_stars', 1200).src || '/images/reach_for_the_stars.png';
     
     return (
       <div className={`bg-black rounded-lg relative overflow-hidden ${className}`}>
