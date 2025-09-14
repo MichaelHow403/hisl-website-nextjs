@@ -308,7 +308,7 @@ export default function Home() {
                 {/* Professional Links */}
                 <div className="flex justify-center space-x-4">
                   <a 
-                    href="https://ie.linkedin.com/in/michaelhowardconstruction" 
+                    href="https://www.linkedin.com/in/michaelhowardconstruction" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="bg-green-900/20 hover:bg-green-900/40 border border-green-500/30 text-green-400 text-xs py-2 px-4 rounded transition-colors"
@@ -391,7 +391,7 @@ export default function Home() {
               <ul className="space-y-2 text-sm text-green-300/70">
                 <li>
                   <a 
-                    href="https://ie.linkedin.com/in/michaelhowardconstruction" 
+                    href="https://www.linkedin.com/in/michaelhowardconstruction" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="hover:text-green-300 transition-colors"
