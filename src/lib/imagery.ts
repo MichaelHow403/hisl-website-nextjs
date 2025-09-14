@@ -1,5 +1,5 @@
 // Auto-generated imagery manifest
-// Generated on: 2025-09-14T12:16:48.775Z
+// Generated on: 2025-09-14T17:26:41.548Z
 // Total images: 14
 
 export interface ImageData {
