@@ -300,10 +300,30 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-bold text-green-400 mb-2">MICHAEL HOWARD</h3>
                 <p className="text-green-300/70 mb-4">Founder & Chief Architect</p>
-                <p className="text-green-300/60 text-sm leading-relaxed">
+                <p className="text-green-300/60 text-sm leading-relaxed mb-4">
                   Sovereign AI systems architect focused on human-centered artificial intelligence. 
                   Leading development of privacy-preserving AI infrastructure for enterprise deployment.
                 </p>
+                
+                {/* Professional Links */}
+                <div className="flex justify-center space-x-4">
+                  <a 
+                    href="https://ie.linkedin.com/in/michaelhowardconstruction" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="bg-green-900/20 hover:bg-green-900/40 border border-green-500/30 text-green-400 text-xs py-2 px-4 rounded transition-colors"
+                  >
+                    LinkedIn Profile
+                  </a>
+                  <a 
+                    href="https://substack.com/@michaelhowardmciob" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="bg-green-900/20 hover:bg-green-900/40 border border-green-500/30 text-green-400 text-xs py-2 px-4 rounded transition-colors"
+                  >
+                    Substack Articles
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -367,10 +387,28 @@ export default function Home() {
             </div>
             
             <div>
-              <h4 className="text-green-400 font-semibold mb-4">COMPLIANCE</h4>
+              <h4 className="text-green-400 font-semibold mb-4">CONNECT</h4>
               <ul className="space-y-2 text-sm text-green-300/70">
-                <li><a href="#" className="hover:text-green-300 transition-colors">→ GDPR PROTOCOL</a></li>
-                <li><a href="#" className="hover:text-green-300 transition-colors">→ EU AI ACT</a></li>
+                <li>
+                  <a 
+                    href="https://ie.linkedin.com/in/michaelhowardconstruction" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="hover:text-green-300 transition-colors"
+                  >
+                    → LINKEDIN
+                  </a>
+                </li>
+                <li>
+                  <a 
+                    href="https://substack.com/@michaelhowardmciob" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="hover:text-green-300 transition-colors"
+                  >
+                    → SUBSTACK
+                  </a>
+                </li>
                 <li><a href="/consent" className="hover:text-green-300 transition-colors">→ CONSENT MGMT</a></li>
                 <li><a href="#" className="hover:text-green-300 transition-colors">→ DATA SOVEREIGN</a></li>
               </ul>
