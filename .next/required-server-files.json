@@ -4,7 +4,7 @@
     "env": {
       "_sentryRewriteFramesDistDir": ".next",
       "_sentryRewriteFramesAssetPrefixPath": "",
-      "_sentryRelease": "9e5a3d93d1705ed3f7455d0a16a261c0b9a6badd"
+      "_sentryRelease": "1367b44c05d443692b3a75700a0c7104af363a48"
     },
     "webpack": null,
     "eslint": {
@@ -326,7 +326,7 @@
               "loader": "/home/michael/projects/hisl-website-nextjs/node_modules/@sentry/nextjs/build/cjs/config/loaders/valueInjectionLoader.js",
               "options": {
                 "values": {
-                  "_sentryRouteManifest": "{\"dynamicRoutes\":[],\"staticRoutes\":[{\"path\":\"/\"},{\"path\":\"/about\"},{\"path\":\"/consent\"},{\"path\":\"/contact\"},{\"path\":\"/deploy\"},{\"path\":\"/globe\"},{\"path\":\"/knowledge\"},{\"path\":\"/projects\"},{\"path\":\"/strategy-live\"}]}",
+                  "_sentryRouteManifest": "{\"dynamicRoutes\":[],\"staticRoutes\":[{\"path\":\"/\"},{\"path\":\"/about\"},{\"path\":\"/consent\"},{\"path\":\"/contact\"},{\"path\":\"/deploy\"},{\"path\":\"/globe\"},{\"path\":\"/knowledge\"},{\"path\":\"/poem\"},{\"path\":\"/projects\"},{\"path\":\"/strategy-live\"}]}",
                   "_sentryNextJsVersion": "15.5.0"
                 }
               }

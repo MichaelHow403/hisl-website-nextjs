@@ -1,6 +1,6 @@
 // Auto-generated imagery manifest
-// Generated on: 2025-09-14T10:19:02.951Z
-// Total images: 16
+// Generated on: 2025-09-14T12:16:48.775Z
+// Total images: 14
 
 export interface ImageData {
   name: string;
@@ -120,14 +120,6 @@ export const imagery: ImageManifest = {
       "srcSet": "/imagery/processed/general/ai_dna-1200w.webp 1200w, /imagery/processed/general/ai_dna-2400w.webp 2400w",
       "src": "/imagery/processed/general/ai_dna-2400w.webp"
     },
-    "ai_dna.png": {
-      "name": "ai_dna.png",
-      "category": "general",
-      "lqip": "/imagery/processed/general/ai_dna.png-lqip.webp",
-      "sizes": {},
-      "srcSet": "",
-      "src": null
-    },
     "ai_dna2": {
       "name": "ai_dna2",
       "category": "general",
@@ -141,20 +133,12 @@ export const imagery: ImageManifest = {
     "feather": {
       "name": "feather",
       "category": "general",
-      "lqip": null,
+      "lqip": "/imagery/processed/general/feather-lqip.webp",
       "sizes": {
         "1200": "/imagery/processed/general/feather-1200w.webp"
       },
       "srcSet": "/imagery/processed/general/feather-1200w.webp 1200w",
       "src": "/imagery/processed/general/feather-1200w.webp"
-    },
-    "feather.png": {
-      "name": "feather.png",
-      "category": "general",
-      "lqip": "/imagery/processed/general/feather.png-lqip.webp",
-      "sizes": {},
-      "srcSet": "",
-      "src": null
     },
     "michael_howard": {
       "name": "michael_howard",

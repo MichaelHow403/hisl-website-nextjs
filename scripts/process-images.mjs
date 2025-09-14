@@ -66,8 +66,12 @@ function generateOutputFilename(inputFilename, size) {
 /**
  * Generate LQIP (Low Quality Image Placeholder)
  */
-async function generateLQIP(inputPath, outputDir, cleanBasename) {
+async function generateLQIP(inputPath, outputDir, originalFilename) {
   try {
+    // Extract basename and clean it properly
+    const ext = path.extname(originalFilename);
+    const basename = path.basename(originalFilename, ext);
+    const cleanBasename = cleanFilename(basename);
     const lqipPath = path.join(outputDir, `${cleanBasename}-lqip.webp`);
     
     await sharp(inputPath)
@@ -116,7 +120,7 @@ async function processImage(inputPath, outputBaseDir) {
     const processedFiles = [];
 
     // Generate LQIP
-    const lqipFile = await generateLQIP(inputPath, outputDir, cleanBasename);
+    const lqipFile = await generateLQIP(inputPath, outputDir, filename);
     if (lqipFile) {
       processedFiles.push({
         size: 'lqip',

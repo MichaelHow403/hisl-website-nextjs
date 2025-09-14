@@ -10,6 +10,7 @@
   "/globe/page": "/globe",
   "/knowledge/page": "/knowledge",
   "/page": "/",
+  "/poem/page": "/poem",
   "/projects/page": "/projects",
   "/strategy-live/page": "/strategy-live"
 }

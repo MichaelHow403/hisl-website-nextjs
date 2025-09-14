@@ -32,48 +32,27 @@ export default function Home() {
     }
   };
 
-  const agentFleet = [
+  const solutions = [
     {
-      name: "RAMS-GUARD",
-      status: "Active",
-      description: "Risk Assessment & Mitigation System",
-      icon: "🛡️",
-      color: "bg-green-900/20 border-green-500/30"
-    },
-    {
-      name: "TTOP Synth",
-      status: "Active", 
-      description: "Threat Detection & Analysis",
-      icon: "🔍",
-      color: "bg-green-900/20 border-green-500/30"
-    },
-    {
-      name: "BuildTrace AI",
-      status: "Standby",
-      description: "Construction Analytics",
+      name: "Construction Safety",
+      description: "Reduce incidents across dynamic sites",
+      details: "Real-time hazard detection, PPE compliance monitoring, and automated safety alerts for construction environments.",
       icon: "🏗️",
-      color: "bg-yellow-900/20 border-yellow-500/30"
+      metrics: "78% reduction in safety incidents"
     },
     {
-      name: "Compliance Core",
-      status: "Active",
-      description: "Regulatory Oversight",
-      icon: "📋",
-      color: "bg-green-900/20 border-green-500/30"
+      name: "Energy Reliability", 
+      description: "Predict failures and balance loads",
+      details: "Predictive maintenance, load optimization, and grid stability for energy infrastructure and industrial facilities.",
+      icon: "⚡",
+      metrics: "45% fewer unplanned outages"
     },
     {
-      name: "IntegAI Prime",
-      status: "Active",
-      description: "Master Orchestrator",
-      icon: "🧠",
-      color: "bg-green-900/20 border-green-500/30"
-    },
-    {
-      name: "Data Sovereign",
-      status: "Locked",
-      description: "Privacy Protection",
-      icon: "🔒",
-      color: "bg-red-900/20 border-red-500/30"
+      name: "Manufacturing Insight",
+      description: "Machine health and line optimization",
+      details: "Equipment monitoring, quality control, and production efficiency optimization for manufacturing operations.",
+      icon: "🏭",
+      metrics: "32% improvement in OEE"
     }
   ];
 
@@ -83,15 +62,21 @@ export default function Home() {
       <div className="fixed inset-0 opacity-30 pointer-events-none">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-950 via-slate-900 to-black"></div>
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-amber-900/10 via-transparent to-transparent"></div>
-        {/* Starfield effect */}
+        {/* Industrial starfield with eco-nodes */}
         <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(2px 2px at 20px 30px, #d4af37, transparent),
-                           radial-gradient(2px 2px at 40px 70px, rgba(212, 175, 55, 0.4), transparent),
-                           radial-gradient(1px 1px at 90px 40px, #d4af37, transparent),
-                           radial-gradient(1px 1px at 130px 80px, rgba(57, 215, 201, 0.6), transparent),
-                           radial-gradient(2px 2px at 160px 30px, rgba(212, 175, 55, 0.3), transparent)`,
+          backgroundImage: `radial-gradient(2px 2px at 20px 30px, #F2D08A, transparent),
+                           radial-gradient(2px 2px at 40px 70px, rgba(242, 208, 138, 0.4), transparent),
+                           radial-gradient(1px 1px at 90px 40px, #D9A441, transparent),
+                           radial-gradient(1px 1px at 130px 80px, #4FEA77, transparent),
+                           radial-gradient(2px 2px at 160px 30px, rgba(217, 164, 65, 0.3), transparent)`,
           backgroundRepeat: 'repeat',
           backgroundSize: '200px 100px'
+        }}></div>
+        
+        {/* Industrial texture overlay */}
+        <div className="absolute inset-0 opacity-10" style={{
+          backgroundImage: `linear-gradient(30deg, #F2D08A 0%, #D9A441 100%)`,
+          mixBlendMode: 'overlay'
         }}></div>
       </div>
       {/* Header */}
@@ -102,9 +87,9 @@ export default function Home() {
               <div className="w-3 h-3 bg-amber-400 rounded-full animate-pulse shadow-sm shadow-amber-400/50"></div>
               <div>
                 <h1 className="text-2xl font-bold bg-gradient-to-r from-amber-400 to-yellow-300 bg-clip-text text-transparent">
-                  HISL CONTROL
+                  HISL
                 </h1>
-                <p className="text-xs text-amber-300/70 font-medium tracking-wide">SYSTEM ONLINE</p>
+                <p className="text-xs text-amber-300/70 font-medium tracking-wide">INDUSTRIAL INTELLIGENCE</p>
               </div>
             </div>
             <nav className="hidden md:flex space-x-8">
@@ -134,16 +119,120 @@ export default function Home() {
               <div className="w-3 h-3 bg-teal-400 rounded-full animate-pulse shadow-sm shadow-teal-400/50"></div>
               <span className="text-amber-300 font-semibold text-lg tracking-wide">SYSTEM ONLINE</span>
             </div>
-            <h1 className="text-5xl md:text-8xl font-bold bg-gradient-to-br from-amber-400 via-yellow-300 to-amber-200 bg-clip-text text-transparent mb-6 tracking-wider leading-tight drop-shadow-2xl">
-              HISL CONTROL
+            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-br from-amber-400 via-yellow-300 to-amber-200 bg-clip-text text-transparent mb-6 tracking-wider leading-tight drop-shadow-2xl">
+              Industrial intelligence that keeps people safe — and operations sustainable.
             </h1>
-            <p className="text-2xl text-amber-100 mb-4 font-light leading-relaxed">
-              Sovereign AI Infrastructure for Construction
+            <p className="text-xl text-amber-100 mb-8 font-light leading-relaxed max-w-4xl mx-auto">
+              HISL combines on-site sensing with AI you control to prevent incidents, boost throughput, and cut emissions — even when the network doesn&apos;t cooperate.
             </p>
-            <p className="text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed">
-              Advanced artificial intelligence orchestration for the construction industry, 
-              delivering privacy-preserving, enterprise-grade AI solutions with complete data sovereignty.
-            </p>
+            
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <button className="bg-gradient-to-r from-amber-600 to-yellow-600 hover:from-amber-500 hover:to-yellow-500 text-black px-8 py-4 rounded-xl font-semibold text-lg transition-all shadow-lg hover:shadow-xl hover:shadow-amber-500/20">
+                Book a demo
+              </button>
+              <button className="border-2 border-amber-400/30 text-amber-300 hover:bg-amber-400/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all backdrop-blur-sm">
+                Download the brief
+              </button>
+            </div>
+          </div>
+
+          {/* Problem → Outcome Section */}
+          <div className="mb-24">
+            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              <div className="bg-slate-900/40 backdrop-blur-xl border border-amber-400/20 rounded-2xl p-8 text-center">
+                <div className="text-red-400 text-4xl mb-4">⚠️</div>
+                <h3 className="text-xl font-bold text-amber-300 mb-3">Blind spots create risks.</h3>
+                <div className="text-amber-400 text-2xl mb-3">→</div>
+                <h4 className="text-lg font-semibold text-emerald-300 mb-2">Identify hazards before they escalate.</h4>
+                <p className="text-slate-400 text-sm leading-relaxed">Real-time monitoring prevents incidents through early detection and automated alerts.</p>
+              </div>
+              
+              <div className="bg-slate-900/40 backdrop-blur-xl border border-amber-400/20 rounded-2xl p-8 text-center">
+                <div className="text-yellow-400 text-4xl mb-4">📉</div>
+                <h3 className="text-xl font-bold text-amber-300 mb-3">Operational drift costs money.</h3>
+                <div className="text-amber-400 text-2xl mb-3">→</div>
+                <h4 className="text-lg font-semibold text-emerald-300 mb-2">Tune processes with real-time insight.</h4>
+                <p className="text-slate-400 text-sm leading-relaxed">Continuous optimization maintains peak performance and reduces unplanned downtime.</p>
+              </div>
+              
+              <div className="bg-slate-900/40 backdrop-blur-xl border border-amber-400/20 rounded-2xl p-8 text-center">
+                <div className="text-green-400 text-4xl mb-4">🌱</div>
+                <h3 className="text-xl font-bold text-amber-300 mb-3">Sustainability is fragmented.</h3>
+                <div className="text-amber-400 text-2xl mb-3">→</div>
+                <h4 className="text-lg font-semibold text-emerald-300 mb-2">Measure and improve what matters.</h4>
+                <p className="text-slate-400 text-sm leading-relaxed">Unified tracking delivers actionable environmental and efficiency improvements.</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Platform Highlight Section */}
+          <div className="bg-slate-900/60 backdrop-blur-xl border border-emerald-300/20 rounded-2xl p-12 mb-16 shadow-2xl shadow-emerald-900/10">
+            <div className="text-center mb-8">
+              <div className="inline-flex items-center space-x-2 bg-emerald-600/20 text-emerald-300 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+                <span>OFFLINE-FIRST, SOVEREIGN BY DESIGN</span>
+              </div>
+              <h2 className="text-3xl font-bold bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
+                Industrial Intelligence Platform
+              </h2>
+            </div>
+            
+            <div className="grid lg:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="bg-emerald-600/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">🌐</span>
+                </div>
+                <h3 className="text-lg font-semibold text-emerald-300 mb-2">Edge-to-Cloud</h3>
+                <p className="text-slate-400 text-sm leading-relaxed">Smart routing, compression, secure sync. Works in low/no-connectivity environments.</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="bg-emerald-600/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">🛡️</span>
+                </div>
+                <h3 className="text-lg font-semibold text-emerald-300 mb-2">Safety Layer</h3>
+                <p className="text-slate-400 text-sm leading-relaxed">PPE compliance, zone breaches, anomaly detection. Comprehensive protection protocols.</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="bg-emerald-600/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">🔒</span>
+                </div>
+                <h3 className="text-lg font-semibold text-emerald-300 mb-2">Data Sovereign</h3>
+                <p className="text-slate-400 text-sm leading-relaxed">Your data, your control. Privacy-preserving intelligence that never leaves your infrastructure.</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Results Metrics Section */}
+          <div className="mb-24">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold bg-gradient-to-r from-amber-400 to-yellow-300 bg-clip-text text-transparent mb-4">
+                Proven Results
+              </h2>
+              <p className="text-slate-400 max-w-2xl mx-auto">Industrial operators using HISL see measurable improvements across safety, efficiency, and sustainability metrics.</p>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              <div className="text-center bg-slate-900/40 backdrop-blur-xl border border-amber-400/20 rounded-2xl p-8">
+                <div className="text-4xl font-bold bg-gradient-to-r from-amber-400 to-yellow-300 bg-clip-text text-transparent mb-2">72%</div>
+                <div className="text-amber-300 font-semibold mb-2">faster incident triage</div>
+                <div className="text-slate-400 text-sm">Rapid identification and response to safety events</div>
+              </div>
+              
+              <div className="text-center bg-slate-900/40 backdrop-blur-xl border border-amber-400/20 rounded-2xl p-8">
+                <div className="text-4xl font-bold bg-gradient-to-r from-amber-400 to-yellow-300 bg-clip-text text-transparent mb-2">23%</div>
+                <div className="text-amber-300 font-semibold mb-2">fewer unplanned stops</div>
+                <div className="text-slate-400 text-sm">Predictive maintenance reduces downtime</div>
+              </div>
+              
+              <div className="text-center bg-slate-900/40 backdrop-blur-xl border border-amber-400/20 rounded-2xl p-8">
+                <div className="text-4xl font-bold bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent mb-2">15%</div>
+                <div className="text-emerald-300 font-semibold mb-2">energy reduction</div>
+                <div className="text-slate-400 text-sm">Optimized operations cut emissions and costs</div>
+              </div>
+            </div>
           </div>
 
           {/* WHERE YOUR PROMPTS GO Section */}
@@ -273,67 +362,57 @@ export default function Home() {
         </div>
       </section>
 
-      {/* INTEGAI AGENT FLEET Section */}
+      {/* Industrial Solutions Section */}
       <section className="relative py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-900/50 to-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-amber-400 to-yellow-300 bg-clip-text text-transparent mb-6">
-              INTEGAI AGENT FLEET
+              Industrial Solutions
             </h2>
-            <p className="text-slate-400 text-lg leading-relaxed max-w-2xl mx-auto">
-              Advanced autonomous AI systems working in harmony to deliver comprehensive 
-              construction intelligence and risk management.
+            <p className="text-slate-400 text-lg leading-relaxed max-w-3xl mx-auto">
+              HISL delivers targeted intelligence for critical industrial operations. 
+              Our platform adapts to your environment while maintaining complete data sovereignty.
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {agentFleet.map((agent) => (
+          <div className="grid lg:grid-cols-3 gap-8">
+            {solutions.map((solution) => (
               <div 
-                key={agent.name} 
+                key={solution.name} 
                 className="group bg-slate-900/60 backdrop-blur-xl border border-amber-400/20 rounded-2xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-amber-500/10 hover:border-amber-400/40"
               >
-                <div className="flex items-center justify-between mb-6">
-                  <div className="text-4xl filter drop-shadow-lg">{agent.icon}</div>
-                  <div className={`px-3 py-1 rounded-full text-xs font-bold tracking-wide ${
-                    agent.status === 'Active' ? 'bg-teal-600/20 text-teal-300 border border-teal-500/30' : 
-                    agent.status === 'Standby' ? 'bg-amber-600/20 text-amber-300 border border-amber-500/30' :
-                    'bg-red-600/20 text-red-300 border border-red-500/30'
-                  }`}>
-                    {agent.status.toUpperCase()}
-                  </div>
+                <div className="text-center mb-6">
+                  <div className="text-6xl mb-4 filter drop-shadow-lg">{solution.icon}</div>
+                  <h3 className="text-2xl font-bold text-amber-300 mb-2 group-hover:text-amber-200 transition-colors">
+                    {solution.name}
+                  </h3>
+                  <p className="text-amber-100 font-medium mb-4">
+                    {solution.description}
+                  </p>
                 </div>
                 
-                <h3 className="text-xl font-bold text-amber-300 mb-3 group-hover:text-amber-200 transition-colors">
-                  {agent.name}
-                </h3>
                 <p className="text-slate-400 text-sm mb-6 leading-relaxed">
-                  {agent.description}
+                  {solution.details}
                 </p>
                 
-                {/* Enhanced Deploy Button */}
-                <button 
-                  onClick={() => alert(`${agent.name} - Coming Soon! Contact us for early access demo.`)}
-                  className="w-full bg-gradient-to-r from-amber-600/20 to-yellow-600/20 hover:from-amber-500/30 hover:to-yellow-500/30 border border-amber-500/30 text-amber-300 text-sm py-3 px-4 rounded-xl font-semibold transition-all mb-6 hover:shadow-lg hover:shadow-amber-500/20"
-                >
-                  Deploy → Coming Soon
-                </button>
-                
-                {/* Enhanced Status indicators */}
-                <div className="flex items-center justify-between">
-                  <div className="flex space-x-2">
-                    <div className={`w-3 h-3 rounded-full ${
-                      agent.status === 'Active' ? 'bg-teal-400 animate-pulse shadow-sm shadow-teal-400/50' : 
-                      agent.status === 'Standby' ? 'bg-amber-400 shadow-sm shadow-amber-400/50' :
-                      'bg-red-400 shadow-sm shadow-red-400/50'
-                    }`}></div>
-                    <div className="w-3 h-3 bg-slate-500/40 rounded-full"></div>
-                    <div className="w-3 h-3 bg-slate-500/40 rounded-full"></div>
+                {/* Eco-green metrics highlight */}
+                <div className="bg-emerald-600/10 border border-emerald-400/20 rounded-xl p-4 mb-6">
+                  <div className="flex items-center space-x-2 mb-2">
+                    <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+                    <span className="text-emerald-300 text-sm font-semibold">PROVEN IMPACT</span>
                   </div>
-                  <span className="text-xs text-slate-500 font-mono">
-                    {agent.status === 'Active' ? 'OPERATIONAL' : 
-                     agent.status === 'Standby' ? 'STANDBY' : 'SECURED'}
-                  </span>
+                  <div className="text-emerald-200 font-bold">
+                    {solution.metrics}
+                  </div>
                 </div>
+                
+                {/* CTA Button */}
+                <button 
+                  onClick={() => alert(`${solution.name} - Contact us to discuss your specific requirements.`)}
+                  className="w-full bg-gradient-to-r from-amber-600/20 to-yellow-600/20 hover:from-amber-500/30 hover:to-yellow-500/30 border border-amber-500/30 text-amber-300 text-sm py-3 px-4 rounded-xl font-semibold transition-all hover:shadow-lg hover:shadow-amber-500/20"
+                >
+                  Learn More
+                </button>
               </div>
             ))}
           </div>
@@ -366,10 +445,11 @@ export default function Home() {
                   )}
                 </div>
                 <h3 className="text-xl font-bold text-amber-400 mb-2">MICHAEL HOWARD</h3>
-                <p className="text-amber-300/70 mb-4">Founder & Chief Architect</p>
+                <p className="text-amber-300/70 mb-4">MCIOB, Chartered Construction Manager</p>
                 <p className="text-amber-100/60 text-sm leading-relaxed mb-4">
-                  Sovereign AI systems architect focused on human-centered artificial intelligence. 
-                  Leading development of privacy-preserving AI infrastructure for enterprise deployment.
+                  Director at Howard Integritas Solutions Ltd (HISL), a consultancy focused on construction management, 
+                  QA/compliance oversight, and AI-supported documentation workflows in pharmaceutical and life sciences capital projects. 
+                  Expert in integrating traditional construction management with modern AI technologies for enhanced safety and efficiency.
                 </p>
                 
                 {/* Professional Links */}
@@ -411,10 +491,22 @@ export default function Home() {
                   )}
                 </div>
                 <h3 className="text-xl font-bold text-amber-400 mb-2">INTEGAI</h3>
-                <p className="text-amber-300/70 mb-4">Master AI Orchestrator</p>
-                <p className="text-amber-100/60 text-sm leading-relaxed">
-                  Advanced AI coordination system managing autonomous agent fleets. 
-                  Ensuring ethical compliance and sovereign operation across all AI subsystems.
+                <p className="text-amber-300/70 mb-4">Sovereign, offline-first orchestration for industrial AI</p>
+                <p className="text-amber-100/60 text-sm leading-relaxed mb-4">
+                  HISL&apos;s orchestration platform that lets industry run AI-powered safety, reliability, and sustainability workflows on-site, on their terms — even without cloud connectivity.
+                </p>
+                <div className="bg-emerald-600/10 border border-emerald-400/20 rounded-xl p-4 mb-4">
+                  <div className="flex items-center space-x-2 mb-2">
+                    <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+                    <span className="text-emerald-300 text-xs font-semibold">EDGE-FIRST ARCHITECTURE</span>
+                  </div>
+                  <div className="text-emerald-200 text-xs leading-relaxed">
+                    Offline-capable orchestration • Safety-first defaults • Audit-ready observability • Sub-second latency
+                  </div>
+                </div>
+                <p className="text-slate-400 text-xs leading-relaxed">
+                  <strong className="text-amber-300">Mission:</strong> Make AI trustworthy and operable in the most demanding environments. 
+                  Unlike &ldquo;cloud-first&rdquo; systems, IntegAI is designed for compliance-heavy and high-risk industrial sectors.
                 </p>
               </div>
             </div>
@@ -435,7 +527,7 @@ export default function Home() {
                 </div>
               </div>
               <p className="text-amber-100/60 text-sm mb-4">
-                Sovereign AI Infrastructure for Construction Industry
+                Industrial Intelligence for Safety, Sustainability, and Sovereignty
               </p>
               <div className="flex items-center space-x-2 text-xs">
                 <div className="w-2 h-2 bg-teal-400 rounded-full animate-pulse shadow-sm shadow-teal-400/50"></div>
