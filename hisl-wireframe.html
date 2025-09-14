@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HISL Website Wireframes</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background: white; }
+        .page { page-break-after: always; margin-bottom: 50px; }
+        .wireframe { border: 2px solid #333; padding: 10px; margin: 20px 0; background: #f9f9f9; }
+        .section { border: 1px solid #999; padding: 15px; margin: 10px 0; background: white; min-height: 80px; }
+        .header { background: #333; color: white; padding: 10px; text-align: center; }
+        .footer { background: #666; color: white; padding: 10px; text-align: center; }
+        h1 { color: #333; border-bottom: 3px solid #0088ff; padding-bottom: 10px; }
+        h2 { color: #0088ff; }
+        .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+        .card { border: 1px dashed #999; padding: 20px; text-align: center; background: #f0f0f0; }
+        .cta { background: #00ffff; padding: 10px; text-align: center; margin: 5px; display: inline-block; }
+        .note { color: #666; font-style: italic; font-size: 12px; }
+    </style>
+</head>
+<body>
+
+<div class="page">
+    <h1>HISL Website Wireframes - Complete Structure</h1>
+    <p><strong>Project:</strong> Howard Integritas Solutions Ltd</p>
+    <p><strong>Type:</strong> Hybrid Single-Page + Multi-Route</p>
+    <p><strong>Stack:</strong> React + Vite + Tailwind + Three.js</p>
+</div>
+
+<div class="page">
+    <h1>1. LANDING PAGE (Single Scroll)</h1>
+    <div class="wireframe">
+        <div class="header">
+            HISL CONTROL | [LinkedIn] [Substack] [Menu ☰]
+        </div>
+        
+        <div class="section" style="min-height: 300px; text-align: center;">
+            <h2>HERO SECTION</h2>
+            <p>● SYSTEM ONLINE</p>
+            <h1 style="font-size: 48px;">HISL CONTROL</h1>
+            <p>Sovereign AI Infrastructure for Construction</p>
+            <p class="note">Building the future where artificial intelligence meets construction excellence.</p>
+            <div>
+                <span class="cta">LinkedIn</span>
+                <span class="cta">Substack</span>
+                <span class="cta" style="background: #333; color: white;">Deploy Agent</span>
+            </div>
+            <p>↓ (scroll indicator)</p>
+        </div>
+        
+        <div class="section" style="min-height: 400px;">
+            <h2>WHERE YOUR PROMPTS GO</h2>
+            <div style="border: 2px solid #00ffff; height: 300px; display: flex; align-items: center; justify-content: center; background: #000; color: #0ff;">
+                <div>
+                    <p>[3D INTERACTIVE GLOBE]</p>
+                    <p>🦅 Huginn & Muninn (orbiting ravens)</p>
+                    <p>→ Prompt flow visualization →</p>
+                </div>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-top: 10px;">
+                <div class="card">
+                    <small>Odin Mythology Tooltip</small>
+                </div>
+                <div class="card">
+                    <small>Server Status: Dublin ✓</small>
+                </div>
+            </div>
+            <input type="text" placeholder="Enter your prompt..." style="width: 100%; padding: 10px; margin-top: 10px;">
+        </div>
+        
+        <div class="section">
+            <h2>INTEGAI AGENT FLEET</h2>
+            <div class="grid">
+                <div class="card">
+                    <span style="color: green;">● ACTIVE</span>
+                    <h3>RAMS-GUARD</h3>
+                    <p class="note">Risk Assessment Guardian</p>
+                    <button>Deploy →</button>
+                </div>
+                <div class="card">
+                    <span style="color: green;">● ACTIVE</span>
+                    <h3>TTOP Synth</h3>
+                    <p class="note">Technical Operations</p>
+                    <button>Deploy →</button>
+                </div>
+                <div class="card">
+                    <span style="color: orange;">● STANDBY</span>
+                    <h3>BuildTrace AI</h3>
+                    <p class="note">Timeline Tracker</p>
+                </div>
+                <div class="card">
+                    <span style="color: green;">● ACTIVE</span>
+                    <h3>Compliance Core</h3>
+                    <p class="note">GDPR/NIS2 Engine</p>
+                    <button>Deploy →</button>
+                </div>
+                <div class="card">
+                    <span style="color: green;">● ACTIVE</span>
+                    <h3>IntegAI Prime</h3>
+                    <p class="note">Master Orchestration</p>
+                    <button>Deploy →</button>
+                </div>
+                <div class="card">
+                    <span style="color: gray;">● LOCKED</span>
+                    <h3>Data Sovereign</h3>
+                    <p class="note">Irish Data Controller</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>BIOS</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                <div class="card">
+                    <div style="width: 80px; height: 80px; background: #0088ff; border-radius: 50%; margin: 0 auto;"></div>
+                    <h3>Michael Howard</h3>
+                    <p>Founder & CEO</p>
+                    <p class="note">Chartered Construction Manager, AI Strategist, 20+ years experience</p>
+                    <a href="#">LinkedIn →</a>
+                </div>
+                <div class="card">
+                    <div style="width: 80px; height: 80px; background: #ff00ff; border-radius: 50%; margin: 0 auto;">🤖</div>
+                    <h3>IntegAI</h3>
+                    <p>Autonomous Co-Founder</p>
+                    <p class="note">GDPR/NIS2 compliant AI entity, sovereign backend architect</p>
+                    <small>Status: Online | v3.2.1</small>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            © 2025 Howard Integritas Solutions Ltd | LinkedIn | Substack | GitHub
+        </div>
+    </div>
+</div>
+
+<div class="page">
+    <h1>2. PROJECTS HUB (/projects)</h1>
+    <div class="wireframe">
+        <div class="header">
+            ← Back to Control | PROJECTS HUB
+        </div>
+        
+        <div class="section">
+            <input type="text" placeholder="Search projects..." style="width: 100%; padding: 10px;">
+        </div>
+        
+        <div class="section">
+            <div style="height: 150px; background: #000; color: #0ff; display: flex; align-items: center; justify-content: center;">
+                [MINI GLOBE - Filter by Region]
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>9 PROJECT CARDS</h2>
+            <div class="grid">
+                <div class="card">Dublin Port<br><span style="color: green;">Active</span> | AI ✓</div>
+                <div class="card">Cork Housing<br><span style="color: orange;">Planning</span> | AI ✓</div>
+                <div class="card">Galway Campus<br><span style="color: green;">Active</span></div>
+                <div class="card">Belfast Bridge<br><span style="color: gray;">Complete</span> | AI ✓</div>
+                <div class="card">Limerick Data<br><span style="color: green;">Active</span> | AI ✓</div>
+                <div class="card">Waterford Marina<br><span style="color: orange;">Planning</span></div>
+                <div class="card">Sligo Wind<br><span style="color: green;">Active</span> | AI ✓</div>
+                <div class="card">Kilkenny Heritage<br><span style="color: gray;">Complete</span></div>
+                <div class="card">Derry Innovation<br><span style="color: orange;">Planning</span> | AI ✓</div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            © 2025 HISL
+        </div>
+    </div>
+</div>
+
+<div class="page">
+    <h1>3. KNOWLEDGE BASE (/knowledge)</h1>
+    <div class="wireframe">
+        <div class="header">
+            ← Back to Control | KNOWLEDGE BASE
+        </div>
+        
+        <div class="section">
+            <input type="text" placeholder="Ask anything about construction AI..." style="width: 100%; padding: 15px; font-size: 18px;">
+        </div>
+        
+        <div class="section">
+            <div>
+                <button>All</button>
+                <button>Compliance</button>
+                <button>Technology</button>
+                <button>Safety</button>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="card" style="text-align: left; margin-bottom: 10px;">
+                <h3>GDPR Compliance in Construction AI</h3>
+                <small>Article • Compliance</small>
+                <button style="float: right;">View →</button>
+            </div>
+            <div class="card" style="text-align: left; margin-bottom: 10px;">
+                <h3>Building Information Modeling with ML</h3>
+                <small>Video • Technology</small>
+                <button style="float: right;">View →</button>
+            </div>
+            <div class="card" style="text-align: left; margin-bottom: 10px;">
+                <h3>Risk Assessment Automation Guide</h3>
+                <small>Guide • Safety</small>
+                <button style="float: right;">View →</button>
+            </div>
+        </div>
+        
+        <div class="section" style="text-align: center;">
+            <button style="background: #00ffff; padding: 15px 30px;">View Full Knowledge Base in Notion</button>
+        </div>
+        
+        <div class="footer">
+            © 2025 HISL
+        </div>
+    </div>
+</div>
+
+<div class="page">
+    <h1>4. STRATEGY LIVE (/strategy-live)</h1>
+    <div class="wireframe">
+        <div class="header">
+            ← Back to Control | STRATEGY LIVE
+        </div>
+        
+        <div class="section">
+            <div style="display: flex; gap: 10px;">
+                <button style="background: #00ffff;">Substack</button>
+                <button>LinkedIn</button>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 20px;">
+                <div class="card" style="min-height: 300px;">
+                    <h3>EMBEDDED FEED</h3>
+                    <p>[Substack/LinkedIn Feed Display]</p>
+                    <a href="#">View on Substack →</a>
+                </div>
+                <div>
+                    <h3>Featured Insights</h3>
+                    <div class="card" style="margin-bottom: 10px;">
+                        <small>AI Transformation</small><br>
+                        <small>2 days ago</small>
+                    </div>
+                    <div class="card" style="margin-bottom: 10px;">
+                        <small>GDPR Update</small><br>
+                        <small>1 week ago</small>
+                    </div>
+                    <div class="card">
+                        <small>Q1 2025 Trends</small><br>
+                        <small>2 weeks ago</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            © 2025 HISL
+        </div>
+    </div>
+</div>
+
+<div class="page">
+    <h1>5. NAVIGATION FLOW</h1>
+    <div class="wireframe">
+        <h2>Site Map</h2>
+        <pre style="font-family: monospace; line-height: 1.5;">
+HOME (/)
+│
+├── Floating Menu (bottom-right)
+│   ├── Projects Hub (/projects)
+│   ├── Knowledge Base (/knowledge)
+│   └── Strategy LIVE (/strategy-live)
+│
+├── Contact (Modal Overlay)
+│
+└── External Links
+    ├── LinkedIn (new tab)
+    ├── Substack (new tab)
+    └── GitHub (new tab)
+        </pre>
+        
+        <h2>Responsive Breakpoints</h2>
+        <ul>
+            <li>Mobile: 320px - 768px</li>
+            <li>Tablet: 768px - 1024px</li>
+            <li>Desktop: 1024px+</li>
+        </ul>
+        
+        <h2>Key Interactions</h2>
+        <ul>
+            <li>3D Globe: Drag to rotate, scroll to zoom</li>
+            <li>Agent Cards: Hover for details, click to deploy</li>
+            <li>Prompt Input: Type and enter for AI visualization</li>
+            <li>Navigation: Smooth scroll on landing, route change for other pages</li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>

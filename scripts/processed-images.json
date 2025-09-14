@@ -1,0 +1,302 @@
+[
+  {
+    "original": "public/images/AI_Construction bridge.png",
+    "bucket": "processed",
+    "filename": "AI_Construction bridge",
+    "variants": [
+      {
+        "width": 1200,
+        "path": "imagery/processed/AI_Construction bridge-1200w.webp",
+        "size": 102302
+      },
+      {
+        "width": 2400,
+        "path": "imagery/processed/AI_Construction bridge-2400w.webp",
+        "size": 343838
+      }
+    ],
+    "lqip": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADQAwCdASoUAAsAPzmGulOvKSWisAgB4CcJYgC7ACHMy9W+r96dnAAA8pj5UDsJGTM83Dhj9AxuL4ucY6VEu1PKhyXjted7Uq+AAA==",
+    "dominantColor": "rgb(0, 0, 0)",
+    "processed": "2025-09-14T04:49:09.880Z"
+  },
+  {
+    "original": "public/images/AI_DNA.PNG",
+    "bucket": "processed",
+    "filename": "AI_DNA",
+    "variants": [
+      {
+        "width": 1200,
+        "path": "imagery/processed/AI_DNA-1200w.webp",
+        "size": 158836
+      },
+      {
+        "width": 2400,
+        "path": "imagery/processed/AI_DNA-2400w.webp",
+        "size": 438700
+      }
+    ],
+    "lqip": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAADQAwCdASoUAAsAPzmIulOvKSWisAgB4CcJQAALJV3h35+/X8sW2QAA/ro33X3JMTzNGmzYULj7n4ciAlXsbAvVgAA=",
+    "dominantColor": "rgb(0, 0, 0)",
+    "processed": "2025-09-14T04:49:10.586Z"
+  },
+  {
+    "original": "public/images/AI_DNA.png",
+    "bucket": "processed",
+    "filename": "AI_DNA",
+    "variants": [
+      {
+        "width": 1200,
+        "path": "imagery/processed/AI_DNA-1200w.webp",
+        "size": 243564
+      },
+      {
+        "width": 2400,
+        "path": "imagery/processed/AI_DNA-2400w.webp",
+        "size": 601550
+      }
+    ],
+    "lqip": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAwBACdASoUABQAPzmSwFmvKaajqAgB4CcJZ12AABto8Od3rz5V6UVwbgAA/uyN7q0U+ApJmUTuUXb6J0G0R+mv0RfeWflK2Ynv154TaebukAAA",
+    "dominantColor": "rgb(0, 0, 0)",
+    "processed": "2025-09-14T04:49:11.218Z"
+  },
+  {
+    "original": "public/images/AI_DNA2.webp",
+    "bucket": "processed",
+    "filename": "AI_DNA2",
+    "variants": [
+      {
+        "width": 1200,
+        "path": "imagery/processed/AI_DNA2-1200w.webp",
+        "size": 226680
+      },
+      {
+        "width": 2400,
+        "path": "imagery/processed/AI_DNA2-2400w.webp",
+        "size": 601550
+      }
+    ],
+    "lqip": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAAAQBACdASoUABQAPzmWw1mvKqejqAgB4CcJZ12AABto8Od3ryjrm8msaAD+7I3urRT4CkmZRO5RdXC2FRYuPlMyqBnXOrYyQcBUnXtlFXNHVyoAAAA=",
+    "dominantColor": "rgb(0, 0, 0)",
+    "processed": "2025-09-14T04:49:12.004Z"
+  },
+  {
+    "original": "public/images/Feather.PNG",
+    "bucket": "processed",
+    "filename": "Feather",
+    "variants": [
+      {
+        "width": 1200,
+        "path": "imagery/processed/Feather-1200w.webp",
+        "size": 142372
+      },
+      {
+        "width": 2400,
+        "path": "imagery/processed/Feather-2400w.webp",
+        "size": 369654
+      }
+    ],
+    "lqip": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAABwBACdASoUABQAPyV8slOuKCSit/qoAcAkiWcAAFu0JU+pkOWGfMks6UaZQAD+6/LDs6wUVF/UtDzOBxYwLTGYMKAAAA==",
+    "dominantColor": "rgb(0, 0, 0)",
+    "processed": "2025-09-14T04:49:12.634Z"
+  },
+  {
+    "original": "public/images/HISL_Logo.jpeg",
+    "bucket": "processed",
+    "filename": "HISL_Logo",
+    "variants": [
+      {
+        "width": 1200,
+        "path": "imagery/processed/HISL_Logo-1200w.webp",
+        "size": 53096
+      },
+      {
+        "width": 2400,
+        "path": "imagery/processed/HISL_Logo-2400w.webp",
+        "size": 53096
+      }
+    ],
+    "lqip": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAABwAwCdASoTABQAPzmIu1YvKKYjsBgIAeAnCWUAACGwNojV2JAA/uv/JMiE3DxTJ6YTK7f4l3VN7VNEgB9CTW34KAAAAA==",
+    "dominantColor": "rgb(0, 0, 0)",
+    "processed": "2025-09-14T04:49:12.795Z"
+  },
+  {
+    "original": "public/images/IngegAI Logo.png",
+    "bucket": "processed",
+    "filename": "IngegAI Logo",
+    "variants": [
+      {
+        "width": 1200,
+        "path": "imagery/processed/IngegAI Logo-1200w.webp",
+        "size": 28214
+      },
+      {
+        "width": 2400,
+        "path": "imagery/processed/IngegAI Logo-2400w.webp",
+        "size": 28214
+      }
+    ],
+    "lqip": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAACQAwCdASoUABMAPzmMulYvKSWjqA1R4CcJZwAALnZZORxKdb1oAP7ozCiK36/P/DSvr6y25BjGv4AkujCWwIAA",
+    "dominantColor": "rgb(0, 0, 0)",
+    "processed": "2025-09-14T04:49:12.875Z"
+  },
+  {
+    "original": "public/images/animated_globe.png",
+    "bucket": "earth",
+    "filename": "animated_globe",
+    "variants": [
+      {
+        "width": 1200,
+        "path": "imagery/earth/animated_globe-1200w.webp",
+        "size": 95294
+      },
+      {
+        "width": 2400,
+        "path": "imagery/earth/animated_globe-2400w.webp",
+        "size": 147642
+      }
+    ],
+    "lqip": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAADwAgCdASoUAA0APzmKulOvKaWisAgB4CcJZwAAQP64AAD+6O/fJ+rDzxTjiJY+rZlWjCUupLpLOhAA",
+    "dominantColor": "rgb(0, 0, 0)",
+    "processed": "2025-09-14T04:49:13.137Z"
+  },
+  {
+    "original": "public/images/earth_daymap.jpg",
+    "bucket": "earth",
+    "filename": "earth_daymap",
+    "variants": [
+      {
+        "width": 1200,
+        "path": "imagery/earth/earth_daymap-1200w.webp",
+        "size": 66654
+      },
+      {
+        "width": 2400,
+        "path": "imagery/earth/earth_daymap-2400w.webp",
+        "size": 165566
+      }
+    ],
+    "lqip": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADQAwCdASoUAAoAPzmGuVOvKSWisAgB4CcJYgCdACF5GzRCFubjCsAA+punTEGS9ZvhnHhRQ+mBZJt7yuJOC5n78WJOfZGfEtx4AAAA",
+    "dominantColor": "rgb(0, 0, 0)",
+    "processed": "2025-09-14T04:49:13.376Z"
+  },
+  {
+    "original": "public/images/globe_3d_with_ravens.png",
+    "bucket": "earth",
+    "filename": "globe_3d_with_ravens",
+    "variants": [
+      {
+        "width": 1200,
+        "path": "imagery/earth/globe_3d_with_ravens-1200w.webp",
+        "size": 62104
+      },
+      {
+        "width": 2400,
+        "path": "imagery/earth/globe_3d_with_ravens-2400w.webp",
+        "size": 62104
+      }
+    ],
+    "lqip": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAABQBACdASoUABQAPzmIuFOvKSUisAgB4CcJZQDC+CHf46Q7OCLxJCG7lgMAAP7o2gUkfoPiqJY0Ex5IeZyArWqS1pHGTlIAAAA=",
+    "dominantColor": "rgb(0, 0, 0)",
+    "processed": "2025-09-14T04:49:13.578Z"
+  },
+  {
+    "original": "public/images/michael_howard.png",
+    "bucket": "processed",
+    "filename": "michael_howard",
+    "variants": [
+      {
+        "width": 1200,
+        "path": "imagery/processed/michael_howard-1200w.webp",
+        "size": 6372
+      },
+      {
+        "width": 2400,
+        "path": "imagery/processed/michael_howard-2400w.webp",
+        "size": 6372
+      }
+    ],
+    "lqip": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAABwBACdASoUABQAPzmOvlevKaYjqAqp4CcJZQDH5BBIUnP1yi6tlV7tpPjfwAD90KUkOroizWO8D5Ng00tGrj98mTuSccPbgA6lnQ2hUpwLG/oz/wAAAA==",
+    "dominantColor": "rgb(0, 0, 0)",
+    "processed": "2025-09-14T04:49:13.603Z"
+  },
+  {
+    "original": "public/images/raven_huginn.png",
+    "bucket": "processed",
+    "filename": "raven_huginn",
+    "variants": [
+      {
+        "width": 1200,
+        "path": "imagery/processed/raven_huginn-1200w.webp",
+        "size": 184800
+      },
+      {
+        "width": 2400,
+        "path": "imagery/processed/raven_huginn-2400w.webp",
+        "size": 407476
+      }
+    ],
+    "lqip": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAABwBACdASoUABQAPzGCtVOuqKUit/VYAdAmCWMAyrQQ70gSc5R1aqX51GfHIAD+5wrs8O81mVjbRKIWGZ/5KGiPaxJeyjd9A90CwGFUf/0nQC7T3AA=",
+    "dominantColor": "rgb(0, 0, 0)",
+    "processed": "2025-09-14T04:49:14.168Z"
+  },
+  {
+    "original": "public/images/raven_muninn.png",
+    "bucket": "processed",
+    "filename": "raven_muninn",
+    "variants": [
+      {
+        "width": 1200,
+        "path": "imagery/processed/raven_muninn-1200w.webp",
+        "size": 184800
+      },
+      {
+        "width": 2400,
+        "path": "imagery/processed/raven_muninn-2400w.webp",
+        "size": 407476
+      }
+    ],
+    "lqip": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAABwBACdASoUABQAPzGCtVOuqKUit/VYAdAmCWMAyrQQ70gSc5R1aqX51GfHIAD+5wrs8O81mVjbRKIWGZ/5KGiPaxJeyjd9A90CwGFUf/0nQC7T3AA=",
+    "dominantColor": "rgb(0, 0, 0)",
+    "processed": "2025-09-14T04:49:14.733Z"
+  },
+  {
+    "original": "public/images/reach_for_the_stars.png",
+    "bucket": "starfields",
+    "filename": "reach_for_the_stars",
+    "variants": [
+      {
+        "width": 1200,
+        "path": "imagery/starfields/reach_for_the_stars-1200w.webp",
+        "size": 211862
+      },
+      {
+        "width": 2400,
+        "path": "imagery/starfields/reach_for_the_stars-2400w.webp",
+        "size": 581948
+      }
+    ],
+    "lqip": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAAAwBACdASoUABQAPzmSvVgvKiYjqAqp4CcJZQC06BbJOCXcjsA8TXmOcoAA/umdvE73uc28liEUr5yFr8kvqpVeHthOg9H1RkWnWRessUqiFzcPhg0SzlKryQ4ggAAAAAA=",
+    "dominantColor": "rgb(0, 0, 0)",
+    "processed": "2025-09-14T04:49:15.416Z"
+  },
+  {
+    "original": "public/images/rotating_globe_animation.png",
+    "bucket": "earth",
+    "filename": "rotating_globe_animation",
+    "variants": [
+      {
+        "width": 1200,
+        "path": "imagery/earth/rotating_globe_animation-1200w.webp",
+        "size": 83470
+      },
+      {
+        "width": 2400,
+        "path": "imagery/earth/rotating_globe_animation-2400w.webp",
+        "size": 83470
+      }
+    ],
+    "lqip": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAACQAwCdASoUABQAPzmKu1OvKiYisAgB4CcJZwDE2CHhvU2kCuwAAP7o3RWkNmd6aduwMgXMCPc2OGNAAAA=",
+    "dominantColor": "rgb(0, 0, 0)",
+    "processed": "2025-09-14T04:49:15.619Z"
+  }
+]
