@@ -1,16 +1,16 @@
 {
   "/_not-found/page": "/_not-found",
-  "/about/page": "/about",
   "/api/deepseek/route": "/api/deepseek",
-  "/api/health/route": "/api/health",
+  "/favicon.ico/route": "/favicon.ico",
   "/consent/page": "/consent",
   "/contact/page": "/contact",
   "/deploy/page": "/deploy",
-  "/favicon.ico/route": "/favicon.ico",
   "/globe/page": "/globe",
   "/knowledge/page": "/knowledge",
-  "/page": "/",
   "/poem/page": "/poem",
   "/projects/page": "/projects",
-  "/strategy-live/page": "/strategy-live"
+  "/strategy-live/page": "/strategy-live",
+  "/about/page": "/about",
+  "/page": "/",
+  "/api/health/route": "/api/health"
 }

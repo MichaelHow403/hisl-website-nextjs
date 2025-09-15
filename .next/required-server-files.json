@@ -4,7 +4,7 @@
     "env": {
       "_sentryRewriteFramesDistDir": ".next",
       "_sentryRewriteFramesAssetPrefixPath": "",
-      "_sentryRelease": "902c5599241c13e63ef41dfec3842af2fe077444"
+      "_sentryRelease": "9fe1a0be54b98dfedd7280b0aa1054d692ee7bdf"
     },
     "eslint": {
       "ignoreDuringBuilds": false
@@ -318,33 +318,6 @@
       "tedious"
     ],
     "turbopack": {
-      "rules": {
-        "**/instrumentation-client.*": {
-          "loaders": [
-            {
-              "loader": "/home/michael/projects/hisl-website-nextjs/node_modules/@sentry/nextjs/build/cjs/config/loaders/valueInjectionLoader.js",
-              "options": {
-                "values": {
-                  "_sentryRouteManifest": "{\"dynamicRoutes\":[],\"staticRoutes\":[{\"path\":\"/\"},{\"path\":\"/about\"},{\"path\":\"/consent\"},{\"path\":\"/contact\"},{\"path\":\"/deploy\"},{\"path\":\"/globe\"},{\"path\":\"/knowledge\"},{\"path\":\"/poem\"},{\"path\":\"/projects\"},{\"path\":\"/strategy-live\"}]}",
-                  "_sentryNextJsVersion": "15.5.0"
-                }
-              }
-            }
-          ]
-        },
-        "**/instrumentation.*": {
-          "loaders": [
-            {
-              "loader": "/home/michael/projects/hisl-website-nextjs/node_modules/@sentry/nextjs/build/cjs/config/loaders/valueInjectionLoader.js",
-              "options": {
-                "values": {
-                  "_sentryNextJsVersion": "15.5.0"
-                }
-              }
-            }
-          ]
-        }
-      },
       "root": "/home/michael"
     }
   },
@@ -358,6 +331,8 @@
     ".next/server/functions-config-manifest.json",
     ".next/server/middleware-manifest.json",
     ".next/server/middleware-build-manifest.js",
+    ".next/server/middleware-react-loadable-manifest.js",
+    ".next/react-loadable-manifest.json",
     ".next/server/app-paths-manifest.json",
     ".next/app-path-routes-manifest.json",
     ".next/app-build-manifest.json",

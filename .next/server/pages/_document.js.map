@@ -1,5 +1,1 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": []
-}
+{"version":3,"file":"../pages/_document.js","mappings":"ocAAA,kDCAA,qCCAA,qFCAA,mDCAA","sources":["webpack://hisl-nextjs/external commonjs \"react/jsx-runtime\"","webpack://hisl-nextjs/external commonjs2 \"path\"","webpack://hisl-nextjs/external commonjs \"next/dist/compiled/next-server/pages.runtime.prod.js\"","webpack://hisl-nextjs/external commonjs \"@opentelemetry/api\"","webpack://hisl-nextjs/external commonjs \"react\""],"sourcesContent":["module.exports = require(\"react/jsx-runtime\");","module.exports = require(\"path\");","module.exports = require(\"next/dist/compiled/next-server/pages.runtime.prod.js\");","module.exports = require(\"@opentelemetry/api\");","module.exports = require(\"react\");"],"names":[],"sourceRoot":""}
