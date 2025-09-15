@@ -1,0 +1,20 @@
+{
+  "title": "Product Features",
+  "kicker": "Technology with sovereignty at its core",
+  "media": {
+    "type": "none"
+  },
+  "body": {
+    "raw": "\n- **ComplianceGuard** — GDPR/NIS2 monitoring with human-readable evidence.  \n- **DataSovereign** — local-first processing keeps sensitive data in-region.  \n- **PrivacyShield** — encrypted channels, hardened agent comms.  \n- **AuditTrail** — immutable logs with prompt/response hashing.  \n- **EthicsCore** — human-aligned decision rules with escalation paths.  \n- **SecureComms** — enforced encryption and access control.  \n- **DocuGenie** — document intelligence tailored for regulated industries.  \n- **BuildLens** — construction ops insight: RAMS, QA/QC, handover.\n",
+    "code": "var Component=(()=>{var u=Object.create;var o=Object.defineProperty;var g=Object.getOwnPropertyDescriptor;var m=Object.getOwnPropertyNames;var p=Object.getPrototypeOf,x=Object.prototype.hasOwnProperty;var f=(e,n)=>()=>(n||e((n={exports:{}}).exports,n),n.exports),y=(e,n)=>{for(var r in n)o(e,r,{get:n[r],enumerable:!0})},l=(e,n,r,c)=>{if(n&&typeof n==\"object\"||typeof n==\"function\")for(let t of m(n))!x.call(e,t)&&t!==r&&o(e,t,{get:()=>n[t],enumerable:!(c=g(n,t))||c.enumerable});return e};var v=(e,n,r)=>(r=e!=null?u(p(e)):{},l(n||!e||!e.__esModule?o(r,\"default\",{value:e,enumerable:!0}):r,e)),C=e=>l(o({},\"__esModule\",{value:!0}),e);var d=f((D,s)=>{s.exports=_jsx_runtime});var j={};y(j,{default:()=>h,frontmatter:()=>_});var i=v(d()),_={title:\"Product Features\",kicker:\"Technology with sovereignty at its core\",media:{type:\"none\"}};function a(e){let n={li:\"li\",strong:\"strong\",ul:\"ul\",...e.components};return(0,i.jsxs)(n.ul,{children:[`\n`,(0,i.jsxs)(n.li,{children:[(0,i.jsx)(n.strong,{children:\"ComplianceGuard\"}),\" \\u2014 GDPR/NIS2 monitoring with human-readable evidence.\"]}),`\n`,(0,i.jsxs)(n.li,{children:[(0,i.jsx)(n.strong,{children:\"DataSovereign\"}),\" \\u2014 local-first processing keeps sensitive data in-region.\"]}),`\n`,(0,i.jsxs)(n.li,{children:[(0,i.jsx)(n.strong,{children:\"PrivacyShield\"}),\" \\u2014 encrypted channels, hardened agent comms.\"]}),`\n`,(0,i.jsxs)(n.li,{children:[(0,i.jsx)(n.strong,{children:\"AuditTrail\"}),\" \\u2014 immutable logs with prompt/response hashing.\"]}),`\n`,(0,i.jsxs)(n.li,{children:[(0,i.jsx)(n.strong,{children:\"EthicsCore\"}),\" \\u2014 human-aligned decision rules with escalation paths.\"]}),`\n`,(0,i.jsxs)(n.li,{children:[(0,i.jsx)(n.strong,{children:\"SecureComms\"}),\" \\u2014 enforced encryption and access control.\"]}),`\n`,(0,i.jsxs)(n.li,{children:[(0,i.jsx)(n.strong,{children:\"DocuGenie\"}),\" \\u2014 document intelligence tailored for regulated industries.\"]}),`\n`,(0,i.jsxs)(n.li,{children:[(0,i.jsx)(n.strong,{children:\"BuildLens\"}),\" \\u2014 construction ops insight: RAMS, QA/QC, handover.\"]}),`\n`]})}function h(e={}){let{wrapper:n}=e.components||{};return n?(0,i.jsx)(n,{...e,children:(0,i.jsx)(a,{...e})}):a(e)}return C(j);})();\n;return Component;"
+  },
+  "_id": "sections/03-features.mdx",
+  "_raw": {
+    "sourceFilePath": "sections/03-features.mdx",
+    "sourceFileName": "03-features.mdx",
+    "sourceFileDir": "sections",
+    "contentType": "mdx",
+    "flattenedPath": "sections/03-features"
+  },
+  "type": "Section"
+}

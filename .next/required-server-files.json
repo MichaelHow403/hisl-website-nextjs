@@ -4,9 +4,8 @@
     "env": {
       "_sentryRewriteFramesDistDir": ".next",
       "_sentryRewriteFramesAssetPrefixPath": "",
-      "_sentryRelease": "292d28be12d15eea614a412f172da6548f0564bb"
+      "_sentryRelease": "902c5599241c13e63ef41dfec3842af2fe077444"
     },
-    "webpack": null,
     "eslint": {
       "ignoreDuringBuilds": false
     },
@@ -70,7 +69,7 @@
       "position": "bottom-left"
     },
     "onDemandEntries": {
-      "maxInactiveAge": 60000,
+      "maxInactiveAge": 3600000,
       "pagesBufferLength": 5
     },
     "amp": {

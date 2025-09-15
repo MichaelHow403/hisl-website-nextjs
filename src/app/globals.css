@@ -65,3 +65,17 @@ body {
 .hisl-eco-green {
   color: #4FEA77;
 }
+
+.globe-page {
+  position: relative;
+  min-height: 100vh;
+  background: url('/images/huma_AI-space.jpg') center/cover no-repeat fixed;
+}
+
+.globe-page::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(60% 60% at 50% 40%, rgba(0,0,0,0) 0%, rgba(0,0,0,.6) 60%, rgba(0,0,0,.8) 100%);
+  pointer-events: none;
+}

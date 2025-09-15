@@ -1,0 +1,22 @@
+{
+  "title": "Ethos",
+  "kicker": "Engineering with human dignity",
+  "media": {
+    "type": "image",
+    "src": "/images/reach_for_the_stars.png",
+    "alt": "Faint stars background"
+  },
+  "body": {
+    "raw": "\n> Then prove we now with best endeavour,  \n> What from our efforts yet may spring;  \n> He justly is despised who never  \n> Did thought to aid his labours bring;  \n> For this is Art’s true indication,  \n> When skill is minister to thought,  \n> When types that are the mind’s creation —  \n> The hand to perfect form has wrought.  \n\n<div className=\"text-sm mt-2 text-[#93a6c8]\">— Family verse, adapted</div>\n",
+    "code": "var Component=(()=>{var u=Object.create;var s=Object.defineProperty;var l=Object.getOwnPropertyDescriptor;var b=Object.getOwnPropertyNames;var g=Object.getPrototypeOf,p=Object.prototype.hasOwnProperty;var f=(e,t)=>()=>(t||e((t={exports:{}}).exports,t),t.exports),x=(e,t)=>{for(var r in t)s(e,r,{get:t[r],enumerable:!0})},a=(e,t,r,i)=>{if(t&&typeof t==\"object\"||typeof t==\"function\")for(let o of b(t))!p.call(e,o)&&o!==r&&s(e,o,{get:()=>t[o],enumerable:!(i=l(t,o))||i.enumerable});return e};var _=(e,t,r)=>(r=e!=null?u(g(e)):{},a(t||!e||!e.__esModule?s(r,\"default\",{value:e,enumerable:!0}):r,e)),y=e=>a(s({},\"__esModule\",{value:!0}),e);var c=f((v,h)=>{h.exports=_jsx_runtime});var w={};x(w,{default:()=>d,frontmatter:()=>k});var n=_(c()),k={title:\"Ethos\",kicker:\"Engineering with human dignity\",media:{type:\"image\",src:\"/images/reach_for_the_stars.png\",alt:\"Faint stars background\"}};function m(e){let t={blockquote:\"blockquote\",br:\"br\",p:\"p\",...e.components};return(0,n.jsxs)(n.Fragment,{children:[(0,n.jsxs)(t.blockquote,{children:[`\n`,(0,n.jsxs)(t.p,{children:[\"Then prove we now with best endeavour,\",(0,n.jsx)(t.br,{}),`\n`,\"What from our efforts yet may spring;\",(0,n.jsx)(t.br,{}),`\n`,\"He justly is despised who never\",(0,n.jsx)(t.br,{}),`\n`,\"Did thought to aid his labours bring;\",(0,n.jsx)(t.br,{}),`\n`,\"For this is Art\\u2019s true indication,\",(0,n.jsx)(t.br,{}),`\n`,\"When skill is minister to thought,\",(0,n.jsx)(t.br,{}),`\n`,\"When types that are the mind\\u2019s creation \\u2014\",(0,n.jsx)(t.br,{}),`\n`,\"The hand to perfect form has wrought.\"]}),`\n`]}),`\n`,(0,n.jsx)(\"div\",{className:\"text-sm mt-2 text-[#93a6c8]\",children:\"\\u2014 Family verse, adapted\"})]})}function d(e={}){let{wrapper:t}=e.components||{};return t?(0,n.jsx)(t,{...e,children:(0,n.jsx)(m,{...e})}):m(e)}return y(w);})();\n;return Component;"
+  },
+  "_id": "sections/04-ethos.mdx",
+  "_raw": {
+    "sourceFilePath": "sections/04-ethos.mdx",
+    "sourceFileName": "04-ethos.mdx",
+    "sourceFileDir": "sections",
+    "contentType": "mdx",
+    "flattenedPath": "sections/04-ethos"
+  },
+  "type": "Section"
+}

@@ -1,5 +1,6 @@
 import type { NextConfig } from "next";
 import { withSentryConfig } from "@sentry/nextjs";
+import { withContentlayer } from "next-contentlayer2";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
@@ -62,4 +63,4 @@ const nextConfig: NextConfig = {
   }
 };
 
-export default withSentryConfig(nextConfig, { silent: true });
+export default withContentlayer(withSentryConfig(nextConfig, { silent: true }));

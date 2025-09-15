@@ -1,0 +1,20 @@
+{
+  "title": "IntegAI Simulation",
+  "kicker": "Try the sovereign assistant",
+  "media": {
+    "type": "none"
+  },
+  "body": {
+    "raw": "\nType a prompt, see how requests are **traced** and **audited** in real time.  \nThis preview runs in **Simulation Mode** when live keys aren’t available.\n\n- Badge: *IntegAI Simulation Mode*  \n- Output JSON includes: `runId`, `promptHash`, `responseHash`  \n- Metrics row: tokens, estimated energy (Wh), hops\n",
+    "code": "var Component=(()=>{var m=Object.create;var o=Object.defineProperty;var u=Object.getOwnPropertyDescriptor;var p=Object.getOwnPropertyNames;var g=Object.getPrototypeOf,x=Object.prototype.hasOwnProperty;var _=(n,e)=>()=>(e||n((e={exports:{}}).exports,e),e.exports),y=(n,e)=>{for(var r in e)o(n,r,{get:e[r],enumerable:!0})},c=(n,e,r,s)=>{if(e&&typeof e==\"object\"||typeof e==\"function\")for(let i of p(e))!x.call(n,i)&&i!==r&&o(n,i,{get:()=>e[i],enumerable:!(s=u(e,i))||s.enumerable});return n};var M=(n,e,r)=>(r=n!=null?m(g(n)):{},c(e||!n||!n.__esModule?o(r,\"default\",{value:n,enumerable:!0}):r,n)),f=n=>c(o({},\"__esModule\",{value:!0}),n);var l=_((b,d)=>{d.exports=_jsx_runtime});var w={};y(w,{default:()=>h,frontmatter:()=>j});var t=M(l()),j={title:\"IntegAI Simulation\",kicker:\"Try the sovereign assistant\",media:{type:\"none\"}};function a(n){let e={br:\"br\",code:\"code\",em:\"em\",li:\"li\",p:\"p\",strong:\"strong\",ul:\"ul\",...n.components};return(0,t.jsxs)(t.Fragment,{children:[(0,t.jsxs)(e.p,{children:[\"Type a prompt, see how requests are \",(0,t.jsx)(e.strong,{children:\"traced\"}),\" and \",(0,t.jsx)(e.strong,{children:\"audited\"}),\" in real time.\",(0,t.jsx)(e.br,{}),`\n`,\"This preview runs in \",(0,t.jsx)(e.strong,{children:\"Simulation Mode\"}),\" when live keys aren\\u2019t available.\"]}),`\n`,(0,t.jsxs)(e.ul,{children:[`\n`,(0,t.jsxs)(e.li,{children:[\"Badge: \",(0,t.jsx)(e.em,{children:\"IntegAI Simulation Mode\"})]}),`\n`,(0,t.jsxs)(e.li,{children:[\"Output JSON includes: \",(0,t.jsx)(e.code,{children:\"runId\"}),\", \",(0,t.jsx)(e.code,{children:\"promptHash\"}),\", \",(0,t.jsx)(e.code,{children:\"responseHash\"})]}),`\n`,(0,t.jsx)(e.li,{children:\"Metrics row: tokens, estimated energy (Wh), hops\"}),`\n`]})]})}function h(n={}){let{wrapper:e}=n.components||{};return e?(0,t.jsx)(e,{...n,children:(0,t.jsx)(a,{...n})}):a(n)}return f(w);})();\n;return Component;"
+  },
+  "_id": "sections/05-chat-preview.mdx",
+  "_raw": {
+    "sourceFilePath": "sections/05-chat-preview.mdx",
+    "sourceFileName": "05-chat-preview.mdx",
+    "sourceFileDir": "sections",
+    "contentType": "mdx",
+    "flattenedPath": "sections/05-chat-preview"
+  },
+  "type": "Section"
+}
