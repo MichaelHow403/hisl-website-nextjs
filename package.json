@@ -12,7 +12,10 @@
     "images:all": "npm run images:process && npm run images:manifest"
   },
   "dependencies": {
+    "@react-three/drei": "^10.7.6",
+    "@react-three/fiber": "^8.2.2",
     "@sentry/nextjs": "^10.8.0",
+    "framer-motion": "^11.18.2",
     "next": "15.5.0",
     "posthog-js": "^1.265.0",
     "posthog-node": "^5.8.4",
