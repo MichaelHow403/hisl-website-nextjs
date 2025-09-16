@@ -4,6 +4,9 @@ import { withContentlayer } from "next-contentlayer2";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  experimental: {
+    turbo: {}
+  },
   env: {
     DEEPSEEK_API_KEY: process.env.DEEPSEEK_API_KEY,
     OPENAI_API_KEY: process.env.OPENAI_API_KEY,
