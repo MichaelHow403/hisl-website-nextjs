@@ -3,7 +3,7 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Link from 'next/link';
-import { GlobeSSR } from '@/components/Globe';
+import { EnhancedGlobeSSR } from '@/components/EnhancedGlobe';
 
 export default function HomePage() {
   const containerRef = useRef(null);
@@ -90,7 +90,7 @@ export default function HomePage() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 1 }}
           >
-            <GlobeSSR className="w-full h-full rounded-2xl overflow-hidden border border-gray-700/50 shadow-2xl" />
+            <EnhancedGlobeSSR className="w-full h-full rounded-2xl overflow-hidden border border-gray-700/50 shadow-2xl" />
           </motion.div>
         </div>
 
