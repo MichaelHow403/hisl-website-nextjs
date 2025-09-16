@@ -74,58 +74,16 @@
       "namedRegex": "^/about(?:/)?$"
     },
     {
-      "page": "/consent",
-      "regex": "^/consent(?:/)?$",
+      "page": "/smoke/visuals",
+      "regex": "^/smoke/visuals(?:/)?$",
       "routeKeys": {},
-      "namedRegex": "^/consent(?:/)?$"
+      "namedRegex": "^/smoke/visuals(?:/)?$"
     },
     {
-      "page": "/contact",
-      "regex": "^/contact(?:/)?$",
+      "page": "/test",
+      "regex": "^/test(?:/)?$",
       "routeKeys": {},
-      "namedRegex": "^/contact(?:/)?$"
-    },
-    {
-      "page": "/deploy",
-      "regex": "^/deploy(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/deploy(?:/)?$"
-    },
-    {
-      "page": "/favicon.ico",
-      "regex": "^/favicon\\.ico(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/favicon\\.ico(?:/)?$"
-    },
-    {
-      "page": "/globe",
-      "regex": "^/globe(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/globe(?:/)?$"
-    },
-    {
-      "page": "/knowledge",
-      "regex": "^/knowledge(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/knowledge(?:/)?$"
-    },
-    {
-      "page": "/poem",
-      "regex": "^/poem(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/poem(?:/)?$"
-    },
-    {
-      "page": "/projects",
-      "regex": "^/projects(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/projects(?:/)?$"
-    },
-    {
-      "page": "/strategy-live",
-      "regex": "^/strategy\\-live(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/strategy\\-live(?:/)?$"
+      "namedRegex": "^/test(?:/)?$"
     }
   ],
   "dataRoutes": [],

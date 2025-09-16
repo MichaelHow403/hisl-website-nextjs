@@ -13,14 +13,25 @@ export type Bio = {
   _id: string
   _raw: Local.RawDocumentData
   type: 'Bio'
-  title: string
-  slug: string
-  updated: IsoDateTimeString
-  summary: string
-  image?: string | undefined
+  name: string
+  role?: string | undefined
+  headshotKey?: string | undefined
   /** MDX file body */
   body: MDX
-  url: string
+  slug: string
+}
+
+export type NewsItem = {
+  /** File path relative to `contentDirPath` */
+  _id: string
+  _raw: Local.RawDocumentData
+  type: 'NewsItem'
+  title: string
+  date: IsoDateTimeString
+  source?: string | undefined
+  /** MDX file body */
+  body: MDX
+  slug: string
 }
 
 export type Section = {
@@ -29,13 +40,10 @@ export type Section = {
   _raw: Local.RawDocumentData
   type: 'Section'
   title: string
-  kicker?: string | undefined
-  ctaLabel?: string | undefined
-  ctaHref?: string | undefined
-  media?: any | undefined
+  order: number
   /** MDX file body */
   body: MDX
-
+  slug: string
 }  
 
 /** Nested types */
@@ -46,8 +54,8 @@ export type Section = {
 export type AllTypes = DocumentTypes | NestedTypes
 export type AllTypeNames = DocumentTypeNames | NestedTypeNames
 
-export type DocumentTypes = Bio | Section
-export type DocumentTypeNames = 'Bio' | 'Section'
+export type DocumentTypes = Bio | NewsItem | Section
+export type DocumentTypeNames = 'Bio' | 'NewsItem' | 'Section'
 
 export type NestedTypes = never
 export type NestedTypeNames = never
@@ -56,6 +64,7 @@ export type DataExports = {
   allDocuments: DocumentTypes[]
   allBios: Bio[]
   allSections: Section[]
+  allNewsItems: NewsItem[]
 }
 
 
@@ -76,6 +85,7 @@ declare global {
 
 export type DocumentTypeMap = {
   Bio: Bio
+  NewsItem: NewsItem
   Section: Section
 }
 

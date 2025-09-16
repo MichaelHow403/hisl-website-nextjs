@@ -13,11 +13,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "HISL - Construction Safety AI & Management Consultancy",
-  description: "HISL delivers advanced construction safety AI solutions and project management consultancy. Expert construction management with cutting-edge artificial intelligence for safer, more efficient building projects.",
-  keywords: "construction safety AI, construction management, project management consultancy, construction safety, AI construction, building safety technology, construction consulting, MCIOB, construction AI solutions",
+  title: "HISL - Human Intelligence Systems Laboratory",
+  description: "Sovereign AI agents that respect your data, privacy, and humanity. IntegAI platform for secure, auditable AI orchestration with human-aligned behavior.",
+  keywords: "sovereign AI, AI agents, data privacy, GDPR compliance, NIS2, local-first AI, on-prem AI, air-gap AI, IntegAI, RAVEN orchestrator, data sovereignty, privacy shield, audit trail, ethics core",
   authors: [{ name: "Michael Howard", url: "https://hisl.ie" }, { name: "HISL Team" }],
-  creator: "Michael Howard - Chartered Construction Manager",
+  creator: "Michael Howard - IntegAI Architect",
   publisher: "HISL - Human Intelligence Systems Laboratory",
   robots: "index, follow",
   metadataBase: new URL('https://hisl.ie'),
@@ -25,37 +25,31 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: "HISL - Construction Safety AI & Management Consultancy",
-    description: "Expert construction management consultancy with cutting-edge AI solutions for safer, more efficient building projects. Led by Michael Howard, Chartered Construction Manager.",
+    title: "HISL - Human Intelligence Systems Laboratory",
+    description: "Sovereign AI agents with human-aligned behavior. IntegAI platform for secure, auditable AI orchestration that respects data privacy and sovereignty.",
     type: "website",
     url: "https://hisl.ie",
     siteName: "HISL",
     locale: "en_IE",
     images: [
       {
-        url: "/imagery/processed/general/ai_construction_bridge-1200w.webp",
+        url: "/media/hero/reach-for-the-stars.png",
         width: 1200,
         height: 800,
-        alt: "HISL Construction AI - Advanced building safety technology",
-      },
-      {
-        url: "/imagery/processed/earth/earth_daymap-1200w.webp", 
-        width: 1200,
-        height: 1200,
-        alt: "HISL Global Construction Solutions",
+        alt: "HISL - AI with human soul and sovereignty",
       }
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "HISL - Construction Safety AI & Management Consultancy",
-    description: "Expert construction management with cutting-edge AI solutions for safer building projects.",
-    images: ["/imagery/processed/general/ai_construction_bridge-1200w.webp"],
+    title: "HISL - Human Intelligence Systems Laboratory",
+    description: "Sovereign AI agents that respect your data, privacy, and humanity.",
+    images: ["/media/hero/reach-for-the-stars.png"],
   },
   other: {
     'application-name': 'HISL',
-    'msapplication-TileColor': '#D9A441',
-    'theme-color': '#D9A441',
+    'msapplication-TileColor': '#06080B',
+    'theme-color': '#06080B',
   }
 };
 
@@ -76,37 +70,37 @@ export default function RootLayout({
               "name": "HISL - Human Intelligence Systems Laboratory",
               "legalName": "Human Intelligence Systems Laboratory",
               "url": "https://hisl.ie",
-              "logo": "https://hisl.ie/images/HISL_Logo.jpeg",
-              "description": "Construction Safety AI & Management Consultancy delivering advanced AI solutions for safer, more efficient building projects.",
+              "logo": "https://hisl.ie/media/logos/hisl-logo.jpeg",
+              "description": "Sovereign AI agents that respect your data, privacy, and humanity. IntegAI platform for secure, auditable AI orchestration.",
               "founder": {
                 "@type": "Person",
                 "name": "Michael Howard",
-                "jobTitle": "Chartered Construction Manager",
-                "memberOf": "MCIOB"
+                "jobTitle": "IntegAI Architect",
+                "knowsAbout": ["AI Ethics", "Data Sovereignty", "GDPR Compliance", "AI Orchestration"]
               },
-              "industry": ["Construction Management", "Artificial Intelligence", "Safety Technology"],
+              "industry": ["Artificial Intelligence", "Data Privacy", "Cybersecurity", "AI Ethics"],
               "serviceArea": {
                 "@type": "Country",
                 "name": "Ireland"
               },
               "hasOfferCatalog": {
                 "@type": "OfferCatalog",
-                "name": "Construction AI Services",
+                "name": "IntegAI Services",
                 "itemListElement": [
                   {
                     "@type": "Offer",
                     "itemOffered": {
                       "@type": "Service",
-                      "name": "Construction Safety AI Solutions",
-                      "description": "AI-powered construction safety monitoring and risk assessment"
+                      "name": "Sovereign AI Agents",
+                      "description": "Local-first, air-gap-ready AI orchestration with data sovereignty"
                     }
                   },
                   {
                     "@type": "Offer",
                     "itemOffered": {
                       "@type": "Service", 
-                      "name": "Project Management Consultancy",
-                      "description": "Expert construction project management and consulting services"
+                      "name": "IntegAI Platform",
+                      "description": "Secure, auditable AI agent deployment with human-aligned behavior"
                     }
                   }
                 ]
