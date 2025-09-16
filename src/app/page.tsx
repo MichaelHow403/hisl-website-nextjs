@@ -4,6 +4,7 @@ import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Link from 'next/link';
 import { EnhancedGlobeSSR } from '@/components/EnhancedGlobe';
+import { analytics } from '@/lib/analytics';
 
 export default function HomePage() {
   const containerRef = useRef(null);
@@ -15,8 +16,16 @@ export default function HomePage() {
   const y = useTransform(scrollYProgress, [0, 1], ['0%', '50%']);
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
+  const trackHeroCTA = (ctaType: string) => {
+    analytics.track({
+      name: 'hero_cta_click',
+      category: 'conversion',
+      properties: { cta_type: ctaType, location: 'hero_section' }
+    });
+  };
+
   return (
-    <main ref={containerRef} className="min-h-screen bg-gray-900 text-white">
+    <main ref={containerRef} className="min-h-screen bg-gray-900 text-white" id="main-content">
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         {/* Background Elements */}
@@ -70,12 +79,14 @@ export default function HomePage() {
               <Link
                 href="/projects"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-300 transform hover:scale-105"
+                onClick={() => trackHeroCTA('explore_projects')}
               >
                 Explore Projects
               </Link>
               <Link
                 href="/about"
                 className="border border-gray-600 hover:border-gray-400 text-gray-300 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
+                onClick={() => trackHeroCTA('learn_more')}
               >
                 Learn More
               </Link>

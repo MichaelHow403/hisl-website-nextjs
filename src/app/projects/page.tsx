@@ -178,7 +178,7 @@ export default function Projects() {
               Project Matrix
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Comprehensive overview of HISL's strategic development initiatives and their current status
+              Comprehensive overview of HISL&apos;s strategic development initiatives and their current status
             </p>
           </motion.div>
 
@@ -189,7 +189,7 @@ export default function Projects() {
             animate="visible"
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
-            {projects.map((project, index) => (
+            {projects.map((project) => (
               <motion.div
                 key={project.name}
                 variants={itemVariants}

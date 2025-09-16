@@ -18,7 +18,7 @@ export const Bio = defineDocumentType(() => ({
 
 export const Section = defineDocumentType(() => ({
   name: 'Section',
-  filePathPattern: `sections/*.mdx`,
+  filePathPattern: `sections/[0-9][0-9]-*.mdx`,
   contentType: 'mdx',
   fields: {
     title: { type: 'string', required: true },

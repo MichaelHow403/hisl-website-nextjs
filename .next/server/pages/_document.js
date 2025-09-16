@@ -1,2 +1,5 @@
-try{!function(){var a="undefined"!=typeof window?window:"undefined"!=typeof global?global:"undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:{},b=(new a.Error).stack;b&&(a._sentryDebugIds=a._sentryDebugIds||{},a._sentryDebugIds[b]="32327f1c-1090-4be4-b2ae-0423b3bc080f",a._sentryDebugIdIdentifier="sentry-dbid-32327f1c-1090-4be4-b2ae-0423b3bc080f")}()}catch(a){}"use strict";(()=>{var a={};a.id=839,a.ids=[839],a.modules={8732:a=>{a.exports=require("react/jsx-runtime")},33873:a=>{a.exports=require("path")},40361:a=>{a.exports=require("next/dist/compiled/next-server/pages.runtime.prod.js")},56472:a=>{a.exports=require("@opentelemetry/api")},82015:a=>{a.exports=require("react")}};var b=require("../webpack-runtime.js");b.C(a);var c=b.X(0,[141],()=>b(b.s=46141));module.exports=c})();
-//# sourceMappingURL=_document.js.map
+var R=require("../chunks/ssr/[turbopack]_runtime.js")("server/pages/_document.js")
+R.c("server/chunks/ssr/[root-of-the-server]__f974d538._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__bcdd27ba._.js")
+R.m(47466)
+module.exports=R.m(47466).exports
