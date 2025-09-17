@@ -1,0 +1,41 @@
+# 9 standard agents per sector + Custom
+sectors:
+  construction:
+    standard:
+      - ppe_compliance
+      - restricted_zone_guard
+      - lift_crane_safety
+      - hot_work_monitor
+      - confined_space_monitor
+      - temporary_works_monitor
+      - incident_triage
+      - schedule_drift_guard
+      - sustainability_metrics
+    custom: []
+  energy:
+    standard:
+      - transformer_thermal
+      - vegetation_encroachment
+      - blade_damage_detection
+      - substation_intrusion
+      - peak_shaving
+      - grid_balance
+      - outage_prediction
+      - asset_health_scoring
+      - maintenance_planner
+    custom: []
+  manufacturing:
+    standard:
+      - bearing_wear_monitor
+      - vibration_signature_guard
+      - process_drift_detector
+      - quality_escape_sentinel
+      - oee_tracker
+      - energy_per_unit_optimizer
+      - scrap_reduction_agent
+      - predictive_maintenance
+      - line_balance_optimizer
+    custom: []
+
+# Each agent composes the 9-core roles:
+# planner, retriever, judge, executor, memory, safety, tools, observer, publisher

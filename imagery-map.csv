@@ -1,0 +1,7 @@
+page,section,key,path,alt,attribution,notes
+home,hero,hero.default,/media/hero/hardhat-3d-frame.png,3D gold hard-hat mark on dark,HISL,Replace with real site shot when ready
+home,ethos,ethos.bg,/media/galaxies/reach_stars.webp,Faint starfield backdrop,ESO/S. Brunier (CC BY 4.0),Low opacity
+globe,background,globe.starfield,/media/starfields/eso0932a.webp,Milky Way panorama,ESO (CC BY 4.0),Used as non-WebGL fallback
+solutions,construction,images.construction.sample1,/media/construction/site_night_01.webp,Night site with PPE,—,
+solutions,energy,images.energy.sample1,/media/energy/substation_01.webp,Substation inspection,—,
+solutions,manufacturing,images.manufacturing.sample1,/media/manufacturing/line_01.webp,Assembly line overview,—,
