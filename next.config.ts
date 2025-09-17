@@ -53,7 +53,7 @@ const nextConfig: NextConfig = {
               img-src 'self' data: blob: https:;
               font-src 'self' fonts.gstatic.com;
               connect-src 'self' https: wss:;
-              frame-src 'none';
+              frame-src ${process.env.VERCEL_ENV !== 'production' ? 'https://vercel.live' : "'none'"};
             `.replace(/\n/g, '')
           }
         ]
